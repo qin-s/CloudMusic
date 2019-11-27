@@ -1,4 +1,5 @@
 import React from 'react';
+import "./assents/iconfont/iconfont.css";
 import './App.css';
 import {
     Route,
