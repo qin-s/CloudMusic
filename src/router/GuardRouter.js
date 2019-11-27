@@ -8,7 +8,7 @@ class GuardRouter extends React.Component{
             <this.props.component></this.props.component>
         )
     }
-    componentWillMount(){
+    UNSAFE_componentWillMount(){
         // if(this.props.location.pathname==="/my"){
         //     if(!localStorage.userName)
         //         this.props.history.push({
