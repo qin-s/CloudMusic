@@ -6,7 +6,7 @@ class VideoRecommend extends React.Component{
             <div style={{
                 marginTop:"50px"
             }}>
-                <h2>推荐MV</h2>
+
                 {
 
                     this.props.recommendVideo.map(v=>(
@@ -15,7 +15,7 @@ class VideoRecommend extends React.Component{
                             <img style={{
                                 width:"300px",
                                 height:"200px"
-                            }} onClick={()=>this.props.history.push("/videoDetail/"+v.id)} src={v.picUrl} />
+                            }} alt={""} onClick={()=>this.props.history.push("/videoDetail/"+v.id)} src={v.picUrl} />
                         </div>
                     ))
                 }
@@ -24,7 +24,6 @@ class VideoRecommend extends React.Component{
     }
     componentDidMount() {
         this.props.getRecommend.call(this)
-        console.log(this.props)
     }
 }
 function mapStateToProps(state) {
@@ -37,7 +36,6 @@ function mapDispatchToProps(dispatch){
         getRecommend(){
             dispatch(()=>{
                 this.$axios.get("/personalized/mv").then(({data})=>{
-                    console.log(data)
                     dispatch({
                         type:"UP_RECOMMEND_LIST",
                         payload:{

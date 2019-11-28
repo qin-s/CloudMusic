@@ -1,5 +1,7 @@
 export default {
     vids:[],
     recommendVideo:[],
-    videoDetail: {}
+    videoDetail: {},
+    videoNew:[],
+    videoNetEase:[]
 }
