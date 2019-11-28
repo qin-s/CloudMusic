@@ -1,5 +1,5 @@
 import React from "react";
-import "../../assents/css/my/my.css"
+import "../../assets/css/my/my.css"
 import Swiper from 'swiper/js/swiper.js'
 import 'swiper/css/swiper.min.css'
 import MyHeader from "../../components/my/MyHeader"

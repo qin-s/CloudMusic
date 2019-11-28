@@ -1,6 +1,6 @@
 .swiper-container{
     background:#fff;
-    position:fixed;
+    /* position:fixed; */
     top:0;
     border-bottom: 1px solid #eee;
 }

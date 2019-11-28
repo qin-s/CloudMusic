@@ -40,13 +40,12 @@ class MyCreateLove extends React.Component{
         )
     }
     componentDidMount(){
-        this.$axios.get("/playmode/intelligence/list",{
+        this.$axios.get("/likelist",{
             params:{
-                id:33894312,
-                pid:24381616
+                uid:506866023
             }
         }).then(({data})=>{
-            console.log("心动模式",data)
+            console.log("Like:",data)
         })
     }
 }
