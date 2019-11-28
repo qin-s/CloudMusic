@@ -1,5 +1,5 @@
 ﻿import React from 'react';
-import "../../assents/css/discover/discover.css"
+import "../../assets/css/discover/discover.css"
 import swiper from '../../components/discover/swiper'
 import {
     connect

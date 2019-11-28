@@ -4,7 +4,7 @@ import {
 } from "react-redux"
 import Swiper from 'swiper/js/swiper.js'
 import 'swiper/css/swiper.min.css'
-import "../../assents/css/video.css"
+import "../../assets/css/video.css"
 
 import VideoRecommend from "../../components/video/VideoRecommend";
 import VideoAll from "../../components/video/VideoAll"
