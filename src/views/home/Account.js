@@ -1,4 +1,4 @@
-import "../../assets/css/account.css";
+// import "../../assets/css/account.css";
 import React from "react";
 import {bindActionCreators} from "redux";
 import {connect} from "react-redux";
