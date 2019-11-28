@@ -2,51 +2,43 @@ import React from "react"
 import {
     connect
 } from "react-redux"
-import Swiper from 'swiper/js/swiper.js'
-import 'swiper/css/swiper.min.css'
-import "../../assets/css/video.css"
-
+import "../../assets/css/video/video.css"
+import { Tabs, WhiteSpace } from 'antd-mobile';
 import VideoRecommend from "../../components/video/VideoRecommend";
 import VideoAll from "../../components/video/VideoAll"
-
+import VideoNew from "../../components/video/VideoNew";
+import VideoNetEase from "../../components/video/VideoNetEase";
 class Video extends React.Component{
     constructor(){
-        super()
+        super();
         this.state={
-            arr:["推荐","全部","最新","网易出品"],
+            arr:[
+                { title: '全部' },
+                { title: '推荐' },
+                { title: '最新' },
+                { title: '网易出品' },
+            ],
             num:0,
         }
     }
     render(){
         return (
             <div className={"videoContent"}>
-                <div className="swiper-container">
-                    <div className="swiper-wrapper">
-                        {
-                            this.state.arr.map((v,i)=>(
-                                <div key={i} className="swiper-slide" onClick={this.doComponent.bind(this,i)}>{v}</div>
-                            ))
-                        }
-                    </div>
-                </div>
-                <VideoRecommend {...this.props}></VideoRecommend>
-                <VideoAll style={{
-                    display:((this.state.num === 1)?'block':'none')
-                }} {...this.props}></VideoAll>
+                <WhiteSpace />
+                <Tabs tabs={this.state.arr} renderTabBar={props => <Tabs.DefaultTabBar {...props} page={3} />}>
+                    <VideoAll {...this.props}></VideoAll>
+                    <VideoRecommend {...this.props}></VideoRecommend>
+                    <VideoNew {...this.props}></VideoNew>
+                    <VideoNetEase {...this.props}></VideoNetEase>
+                </Tabs>
+                <WhiteSpace />
             </div>
         )
     }
-    doComponent(i){
-        console.log(this.setState({
-            num:i
-        }))
-    }
-    componentDidMount() {
-        var swiper = new Swiper('.swiper-container', {
-            slidesPerView: 3,
-            spaceBetween: 30,
-        });
-    }
+    renderContent = tab =>
+        (<div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '150px', backgroundColor: '#fff' }}>
+            <p>Content of {tab.title}</p>
+        </div>);
 
 }
 function mapStateToProps(state,props){

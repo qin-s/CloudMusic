@@ -9,13 +9,13 @@ import "../assets/css/login-css/login.css"
         return (
             <div>
 	
-		<div className="logo">
-			<p><i className="iconfont icon-zoom"></i></p>
+		<div className="t-logo">
+			<p><i className="iconfont icon-music"></i></p>
 		</div>
 		
-		<div className="login">
+		<div className="t-login">
 			<input type="text" placeholder="请输入手机号" ref="login"/><br/>
-			<input type="text" placeholder="请输入密码" ref="password"/>
+			<input type="text" placeholder="请输入密码" ref="password"/><br/>
 			<input type="button" value="登录" onClick={this.props.getPhone.bind(this)}/>
 		</div>
 		
@@ -24,13 +24,15 @@ import "../assets/css/login-css/login.css"
         )
 	}
 	componentDidMount(){
-		this.props.getPhone.call(this)
+		this.props.getPhone.bind(this)
+
 		}
 	}
 	function mapStateToProps(state){
-		console.log(state)
+		console.log(state,888)
 		return {
-			id:state.login.id
+			id:state.login.id,
+			username:state.login.username
 		}
 	}
 	function mapDispatchToProps(dispatch){
@@ -38,18 +40,29 @@ import "../assets/css/login-css/login.css"
 		getPhone(){
 			dispatch(()=>{
 				this.$axios.get("/login/cellphone",{
+					
 					params:{
-						phone:15734551563,
-						password:960608
+						phone:this.refs.login.value,
+						password:this.refs.password.value
 					}
 				}).then(({data})=>{
+					// console.log(data)
 					dispatch({
 						type:"UPLOAD",
 						payload:{
-							id:data.account.id
+							id:data.account.id,
+							username:data.profile.nickname
 						}
 					})
 					console.log(data,9999)
+					if(data.account.id){
+						// if(data.code === 502){
+						// 	alert(data.msg)
+						// }
+						this.props.history.push("/my")
+					}else{
+						this.props.history.push("/zhuce")
+					}
 				})
 			})
 		}

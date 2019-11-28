@@ -36,7 +36,6 @@ class VideoAll extends React.Component{
         this.setState({
             mv:data.data
         })
-        const mvLength = this.state.mv
         for(let i =0;i<this.state.mv.length;i++) {
             this.props.getVids.call(this,this.state.mv[i].id)
         }

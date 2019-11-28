@@ -1,9 +1,7 @@
-
-// import "../../assets/css/account.css";
 import React from "react";
 import {bindActionCreators} from "redux";
 import {connect} from "react-redux";
-import accountCreator,{upResult} from "../../store/actionCreater/account"
+import accountCreator from "../../store/actionCreater/account"
 class Account extends React.Component{
     render(){
         return (

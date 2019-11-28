@@ -1,21 +1,17 @@
 import React from "react"
 import {connect} from "react-redux";
-class VideoRecommend extends React.Component{
+class VideoNew extends React.Component{
     render(){
         return (
-            <div style={{
-                marginTop:"50px"
-            }}>
-
+            <div>
                 {
-
-                    this.props.recommendVideo.map(v=>(
-                        <div key={v.id}>
+                    this.props.videoNew.map(v=>(
+                        <div key = {v.id}>
                             <h3 >{v.name}</h3>
                             <img style={{
                                 width:"300px",
                                 height:"200px"
-                            }} alt={""} onClick={()=>this.props.history.push("/videoDetail/"+v.id)} src={v.picUrl} />
+                            }} alt={""} onClick={()=>this.props.history.push("/videoDetail/"+v.id)} src={v.cover} />
                         </div>
                     ))
                 }
@@ -23,23 +19,27 @@ class VideoRecommend extends React.Component{
         )
     }
     componentDidMount() {
-        this.props.getRecommend.call(this)
+        this.props.getNew.call(this)
     }
 }
 function mapStateToProps(state) {
     return {
-        recommendVideo:state.video.recommendVideo
+        videoNew:state.video.videoNew,
     }
 }
 function mapDispatchToProps(dispatch){
     return {
-        getRecommend(){
+        getNew(){
             dispatch(()=>{
-                this.$axios.get("/personalized/mv").then(({data})=>{
+                this.$axios.get("/mv/first",{
+                    params:{
+                        limit:10
+                    }
+                }).then(({data})=>{
                     dispatch({
-                        type:"UP_RECOMMEND_LIST",
+                        type:"UP_NEW_LIST",
                         payload:{
-                            recommendVideo:data.result
+                            videoNew:data.data
                         }
                     })
                 })
@@ -47,4 +47,4 @@ function mapDispatchToProps(dispatch){
         }
     }
 }
-export default connect(mapStateToProps,mapDispatchToProps)(VideoRecommend)
+export default connect(mapStateToProps,mapDispatchToProps)(VideoNew)
