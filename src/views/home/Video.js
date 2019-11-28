@@ -2,7 +2,7 @@ import React from "react"
 import {
     connect
 } from "react-redux"
-import "../../assents/css/video/video.css"
+import "../../assets/css/video/video.css"
 import { Tabs, WhiteSpace } from 'antd-mobile';
 import VideoRecommend from "../../components/video/VideoRecommend";
 import VideoAll from "../../components/video/VideoAll"

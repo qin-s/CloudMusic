@@ -20,7 +20,6 @@ class VideoNew extends React.Component{
     }
     componentDidMount() {
         this.props.getNew.call(this)
-        // console.log(this.props)
     }
 }
 function mapStateToProps(state) {
@@ -37,7 +36,6 @@ function mapDispatchToProps(dispatch){
                         limit:10
                     }
                 }).then(({data})=>{
-                    console.log(data.data)
                     dispatch({
                         type:"UP_NEW_LIST",
                         payload:{

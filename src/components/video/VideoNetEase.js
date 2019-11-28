@@ -36,7 +36,6 @@ function mapDispatchToProps(dispatch){
                         limit:10
                     }
                 }).then(({data})=>{
-                    console.log(data.data)
                     dispatch({
                         type:"UP_NETEASE_LIST",
                         payload:{
