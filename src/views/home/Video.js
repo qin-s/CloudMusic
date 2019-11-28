@@ -24,22 +24,18 @@ class Video extends React.Component{
     render(){
         return (
             <div className={"videoContent"}>
-                <WhiteSpace />
-                <Tabs tabs={this.state.arr} renderTabBar={props => <Tabs.DefaultTabBar {...props} page={3} />}>
+                <Tabs tabBarTextStyle={{fontSize:"20px",lineHeight:"40px"}}
+                      tabBarActiveTextColor="red"
+                      tabBarUnderlineStyle={{borderBottomColor:"#f00"}}
+                      tabs={this.state.arr} renderTabBar={props => <Tabs.DefaultTabBar {...props} page={3} />}>
                     <VideoAll {...this.props}></VideoAll>
                     <VideoRecommend {...this.props}></VideoRecommend>
                     <VideoNew {...this.props}></VideoNew>
                     <VideoNetEase {...this.props}></VideoNetEase>
                 </Tabs>
-                <WhiteSpace />
             </div>
         )
     }
-    renderContent = tab =>
-        (<div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '150px', backgroundColor: '#fff' }}>
-            <p>Content of {tab.title}</p>
-        </div>);
-
 }
 function mapStateToProps(state,props){
     return {
