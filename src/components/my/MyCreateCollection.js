@@ -55,7 +55,7 @@ class MyCreateCollection extends React.Component{
             this.setState({
                 list:data.playlist
             })
-            console.log(data.playlist)
+            console.log("Collection:",data.playlist)
         })
     }
 }

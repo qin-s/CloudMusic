@@ -31,15 +31,15 @@ img{
 }
 
 
-nav{
+.nav{
     margin-top:30px;
 }
-nav .ull{
+.nav .ull{
     display:flex;
     justify-content:space-between;
 
 }
-nav .ull div:nth-child(2){
+.nav .ull div:nth-child(2){
     color:red;
     width:70%;
     background:#666;

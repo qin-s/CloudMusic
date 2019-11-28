@@ -1,5 +1,5 @@
 ﻿import React from 'react';
-import "../../assents/css/discover/discover.css"
+import "../../assets/css/discover/discover.css"
 import swiper from '../../components/discover/swiper'
 import {
     connect
@@ -14,7 +14,7 @@ import {
     render(){
         return (
             <>      
-                <nav>
+                <div className={"nav"}>
                     <div className={"ull"}>
                         <div><i className={"iconfont icon-wodediantai left"}></i></div>
                       <div className={"mid"}> <a className={"adisco"} href={"http://www.baidu.com"}> <i className={"iconfont icon-zoom midd"}>
@@ -22,7 +22,7 @@ import {
                             </i></a> </div>
                         <div> <i className={"iconfont icon-wodediantai right"}></i>  </div>
                     </div>    
-                </nav>  
+                </div>  
 
                 <article>
                     {
