@@ -50,7 +50,7 @@ class MyLocalList extends React.Component{
     }
     componentDidMount(){
        this.$axios.get("/artist/sublist").then(({data})=>{
-          console.log(data);
+        //   console.log(data);
        });
        
     }
