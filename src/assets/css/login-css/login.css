@@ -1,21 +1,14 @@
-*{margin:0;padding:0;box-sizing: border-box;}
-body{
-	/* background:red; */
-}
-/*****手机端*****/	
-	/*top*/
+/* *{margin:0;padding:0;box-sizing: border-box;} */
+
 	
-	/*登录条*/
+	.t-logo{margin-top: 60px; padding:300px; margin:0 auto }
+	.t-logo i{font-size: 100px;color:#d43b33;}
+	.t-logo p{text-align: center; color:rgb(248, 246, 250); font-size:100px;}
+	.t-login{
+		text-align: center;
+	}
 	
-	/*logo*/
-	.logo{margin-top: 60px; padding:300px; }
-	.logo i{font-size: 100px;color:#d43b33;}
-	.logo p{text-align: center; color:rgb(248, 246, 250); font-size:100px;}
-	/*button*/
-	.button{margin-top: 70px;}
-	.button p{font-size: 18px;width:300px;margin:20px auto;border:1px solid #D43B33;border-radius: 50px;}
-	.button p a{text-decoration: none;color:#d43b33;font-family: "微软雅黑";text-align: center;display: block;line-height: 40px;}
-	.login input{
+	.t-login input{
 		margin:40px;
 		border:1px solid red;
 		width:450px;
@@ -24,10 +17,15 @@ body{
 		text-align:center;
 		color:red;
 		font-size:35px;
+		outline: none;
+		/* margin:0 auto */
 	}
 
     .t-tong{
 		font-size:25px;
-		color:#000;;
-    }
+		color:#000;
+		text-align: center;
+		 
+	}
+	
     

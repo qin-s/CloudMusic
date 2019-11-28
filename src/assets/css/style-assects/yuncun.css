@@ -20,6 +20,9 @@
  .icon-wodeshoucang{
     font-size:50px;
 }
+.icon-play{
+    font-size:50px;
+}
 .t-search{
     width:100%;
     background:red;
@@ -59,9 +62,9 @@
     flex-wrap:wrap;
 }
 .t-hot{
-    width:375px;
+    width:750px;
     display: flex;
-    /* flex-wrap:wrap; */
+    flex-wrap:wrap;
 }
 .t-date{
     font-size:30px
@@ -71,6 +74,6 @@
     width:750px;
 }
 .t-hot img{
-    width:375px;
+    width:750px;
 }
 
