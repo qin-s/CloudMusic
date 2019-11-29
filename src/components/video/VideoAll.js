@@ -1,5 +1,7 @@
 import React from 'react';
 import {connect} from "react-redux";
+import { Card, WingBlank, WhiteSpace } from 'antd-mobile';
+
 class VideoAll extends React.Component{
     constructor(){
         super()
@@ -10,18 +12,7 @@ class VideoAll extends React.Component{
     }
     render(){
         return (
-            <div>
-                {
-                    this.props.vids.map(v=>(
-                        <div key={v.id} className={"mvList"}>
-                            <video  style={{height:"270px",
-                                width:"400px",
-                                preload:"none",
-                                outline:"none"}} src={v.url}  controls></video>
-                        </div>
-                    ))
-                }
-            </div>
+            null
         )
     }
     componentDidMount() {
@@ -36,9 +27,25 @@ class VideoAll extends React.Component{
         this.setState({
             mv:data.data
         })
+        // console.log(this.state.mv)
+        const arr = []
         for(let i =0;i<this.state.mv.length;i++) {
-            this.props.getVids.call(this,this.state.mv[i].id)
+            // this.props.getVids.call(this,this.state.mv[i].id)
+              arr.push(this.$axios.get("/mv/url",{
+                  params:{
+                      id:this.state.mv[i].id
+                  }
+              }))
         }
+        const brr = await Promise.all(arr)
+        const obj = {}
+        // console.log(brr)
+        for(let i=0;i<this.state.mv.length;i++){
+            obj[this.state.mv[i].name] = brr[i].data.data.url
+        }
+        // console.log(obj)
+        // console.log(Object.keys(obj))
+        // console.log(Object.values(obj))
     }
 }
 function mapStateToProps(state){
