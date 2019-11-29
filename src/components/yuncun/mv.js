@@ -28,7 +28,7 @@ export default class Allmv extends React.Component {
                     {this.state.data.map(v => (
                         <Fragment>
                             <div className="t-tou">
-                                <p><img src="http://p1.music.126.net/QWMV-Ru_6149AKe0mCBXKg==/1420569024374784.jpg" alt="" /></p>
+                                <p><img style={{width:"50px"}} src="http://p1.music.126.net/QWMV-Ru_6149AKe0mCBXKg==/1420569024374784.jpg" alt="" /></p>
                                 <p className="t-time">
 
 
@@ -55,10 +55,19 @@ export default class Allmv extends React.Component {
                                 <p>{v.info.commentThread.resourceTitle}</p>
                                 {/* <p>kemi</p> */}
                             </div>
+                            
+                            <div className="t-zhuan">
+                                    <p>{v.info.shareCount}</p>
+                                    <p>{v.info.commentCount}</p>
+                                    <p>{v.info.likedCount}</p>
+                                    <p>{}</p>
+                            </div>
+                            <hr/>
 
                         </Fragment>
                     ))
                     }
+                  
 
                 </div>
             </div>

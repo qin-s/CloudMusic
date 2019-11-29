@@ -14,7 +14,7 @@ class MyLocalList extends React.Component{
                         </div>
                     </div>
                 </li>
-                <li>
+                <li  onClick={()=>this.props.history.push("/record")}>
                     <span className="iconfont icon-zuijinbofang"></span>
                     <div className="local-music">
                         <p>最近播放</p>
@@ -49,7 +49,12 @@ class MyLocalList extends React.Component{
         )
     }
     componentDidMount(){
-       this.$axios.get("/artist/sublist").then(({data})=>{
+        // console.log(111,this.props)
+       this.$axios.get("/artist/sublist",{
+           params:{
+            uid:506866023
+           }
+       }).then(({data})=>{
         //   console.log(data);
        });
        

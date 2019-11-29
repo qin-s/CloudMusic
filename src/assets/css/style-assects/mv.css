@@ -3,6 +3,7 @@
     margin:0
 }
 .t-guan{
+    line-height: 100px;;
     width:750px;
     display: flex;
     justify-content:space-evenly;
@@ -27,9 +28,11 @@
 .t-fen {
     margin:40px 30px;
     font-size:30px;
+    line-height: 60px;
 } 
 .t-tou{
-    font-size:20px;
+    font-size:30px;
+    font-family:"微软雅黑";
     display:flex;
     justify-content: left;
     margin:20px auto
@@ -41,7 +44,7 @@
     margin-right:10px;
 }
 .t-wen{
-    margin-left:40px;
+    margin-left:60px;
     width:550px;
 }
 .t-music{
@@ -51,4 +54,14 @@
     font-size:30px;
     justify-content: left;
     margin-bottom:100px;
+    border:1px solid #ccc;
+    padding:15px;
+    background:#ccc;
+    border-radius: 10px;
+}
+.t-zhuan{
+    width:500px;
+    margin:0 auto;
+    display: flex;
+    justify-content: space-between;
 }

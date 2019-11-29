@@ -82,7 +82,7 @@ article{
     border-radius: 15px;
 }
 .rightdown{
-    background:rgb(20, 155, 245);
+    /* background:rgb(20, 155, 245); */
     position:absolute;
     padding:0 20px;
     border-radius: 15px 0 15px 1px;
@@ -113,6 +113,13 @@ aside{
     margin-top:40px;
     padding:0 25px;
 }
+
+.long{
+    margin-top:30px;
+    width:750px;
+    border:1px solid #ccc;
+    opacity: 0.8;
+}
 .songs div:nth-child(1){
     color:#666;
     opacity: 0.7;
@@ -134,3 +141,31 @@ aside{
     border-radius:18px;
     border:2px solid #666;
 }
+.songs .songList{
+    margin-top:10px;
+}
+.songs .songList ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.songs .songList ul li {
+    width:220px;
+    margin-top:30px;
+    position: relative;
+}
+.songs .songList ul li img{
+    width:220px;
+    border-radius:10px;
+}
+.songs ul .playcount{
+    position:absolute;
+    right:0;
+    top:0;
+    color:#fff;
+    margin-right:10px;
+}
+
+
+
+
