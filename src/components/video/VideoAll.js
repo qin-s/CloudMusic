@@ -27,7 +27,7 @@ class VideoAll extends React.Component{
         this.setState({
             mv:data.data
         })
-        console.log(this.state.mv)
+        // console.log(this.state.mv)
         const arr = []
         for(let i =0;i<this.state.mv.length;i++) {
             // this.props.getVids.call(this,this.state.mv[i].id)
@@ -39,13 +39,13 @@ class VideoAll extends React.Component{
         }
         const brr = await Promise.all(arr)
         const obj = {}
-        console.log(brr)
+        // console.log(brr)
         for(let i=0;i<this.state.mv.length;i++){
             obj[this.state.mv[i].name] = brr[i].data.data.url
         }
-        console.log(obj)
-        console.log(Object.keys(obj))
-        console.log(Object.values(obj))
+        // console.log(obj)
+        // console.log(Object.keys(obj))
+        // console.log(Object.values(obj))
     }
 }
 function mapStateToProps(state){

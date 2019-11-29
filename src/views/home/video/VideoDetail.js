@@ -38,6 +38,7 @@ function mapDispatchToProps(dispatch){
                         id
                     }
                 }).then(({data})=>{
+                    console.log(data)
                     dispatch({
                         type:"GET_VIDEO_DETAIL",
                         payload:{

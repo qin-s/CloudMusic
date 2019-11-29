@@ -1,0 +1,20 @@
+.videoRec-mvDetail{
+    position:relative;
+}
+.videoRec-mvDetail .videoRec-playCount{
+    position:absolute;
+    bottom:0;
+    left:10px;
+    color:#fff;
+    font-size:25px;
+}
+.videoRec-mvDetail .videoRec-duration{
+    position:absolute;
+    bottom:0;
+    right:10px;
+    color:#fff;
+    font-size:25px;
+}
+.videoRec-mvDetail  .icon-wodediantai{
+    font-size:25px;
+}
