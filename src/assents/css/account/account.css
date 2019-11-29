@@ -1,0 +1,123 @@
+.cm_account{
+    background-color: #F8F8F8;
+    width:750px;
+    /*height:750px;*/
+}
+.cm_header_input{
+    text-align: center;
+}
+.cm_header_input p{
+    font-size:30px;
+    margin-top:20px;
+    color:#363638;
+}
+.cm_header_input input{
+    width: 700px;
+    border:2px solid #D7D7D7;
+    font-size:40px;
+    padding:15px 0;
+    background-color: #FFFFFF;
+    border-radius:70px;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+.cm_account button{
+    width: 750px;
+    border:none;
+    color:#FF3D3E;
+    font-size:36px;
+    background-color: #FFFFFF;
+    height: 70px;
+}
+.cm_header_top{
+    display:flex;
+    justify-content: space-between;
+    /*margin:40px 20px 0px;*/
+}
+.cm_header_top b{
+    font-size:60px;
+    margin:40px;
+}
+.cm_header_middle{
+    display:flex;
+    /*justify-content: space-between;*/
+}
+.cm_header_middle img{
+    border-radius:50%;
+    width: 160px;
+    height: 160px;
+    margin:40px 30px 40px 40px;
+}
+.cm_header_middle_div{
+    width: 350px;
+    margin-top:50px;
+    margin-left:10px;
+    font-size:40px;
+}
+.cm_header_middle_div_p{
+    display:block;
+    height:50px;
+    font-size:30px;
+    width: 120px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 25px;
+    margin-top:10px;
+    background-color: #EAE9E7;
+}
+.cm_header_middle_div_two{
+    background-color: #FE3C30;
+    width: 200px;
+    height: 60px;
+    font-size:40px;
+    color:#FDFEFC;
+    margin-top:70px;
+    text-align: center;
+    margin-right:30px;
+    line-height: 60px;
+    border-radius:30px;
+}
+.cm_header_middle_div_two b{
+    font-size:40px;
+    /*line-height: 50px;*/
+}
+.cm_header_bottom{
+    display:flex;
+    font-size:30px;
+    text-align: center;
+    justify-content: space-between;
+}
+.cm_header_bottom div{
+    width: 187.5px;
+    border-right:2px solid #F3EEEB;
+}
+.cm_header_bottom_last_div{
+    border:none;
+}
+.cm_header_bottom div p{
+    margin-top: 10px;
+}
+.cm_header_member{
+    display:flex;
+    width: 660px;
+    margin:20px auto 0;
+    border-radius:15px 15px 0 0 ;
+    background-color: #2A2A2A;
+    padding:20px 0;
+}
+.cm_header_member div{
+    width: 300px;
+
+    margin-left: 50px;
+}
+.cm_header_member_div{
+    border-right:2px solid #353535;
+}
+.cm_header_member span{
+    color:#FDE3DB;
+    font-size: 30px;
+}
+.cm_header_member p{
+    color:#BDBDBD;
+    font-size: 20px;
+}

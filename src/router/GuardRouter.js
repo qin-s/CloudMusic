@@ -5,7 +5,7 @@ import {
 class GuardRouter extends React.Component{
     render(){
         return (
-            <this.props.component></this.props.component>
+            <this.props.component {...this.props}></this.props.component>
         )
     }
     UNSAFE_componentWillMount(){
