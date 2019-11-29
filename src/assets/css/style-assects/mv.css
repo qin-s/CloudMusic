@@ -1,0 +1,54 @@
+*{
+    padding:0;
+    margin:0
+}
+.t-guan{
+    width:750px;
+    display: flex;
+    justify-content:space-evenly;
+    font-size: 40px;
+    color:rgb(110, 107, 107);
+   
+
+}
+.t-yin{
+    height:15px;
+    background:#ccc;
+   
+}
+.t-title{
+    display: flex;
+    justify-content: space-between;
+    margin:30px;
+    font-size:40px;
+    color:rgb(114, 110, 110);
+
+}
+.t-fen {
+    margin:40px 30px;
+    font-size:30px;
+} 
+.t-tou{
+    font-size:20px;
+    display:flex;
+    justify-content: left;
+    margin:20px auto
+}
+
+.t-fen img{
+    width:40px;
+    height:40;
+    margin-right:10px;
+}
+.t-wen{
+    margin-left:40px;
+    width:550px;
+}
+.t-music{
+    margin-top:20px;
+    margin-left:40px;
+    display: flex;
+    font-size:30px;
+    justify-content: left;
+    margin-bottom:100px;
+}
