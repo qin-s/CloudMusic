@@ -23,7 +23,7 @@ export default class My extends React.Component{
                 {/* 横向滑动 */}
                 <MySwiper></MySwiper>
                 {/* 本地音乐 */}
-                <MyLocalList></MyLocalList>
+                <MyLocalList {...this.props}></MyLocalList>
                 {/* 创建 */}
                 <div className="my-create">
                     {/* 我创建的歌单 */}
@@ -61,7 +61,7 @@ export default class My extends React.Component{
                                 <span className="iconfont icon-caidan-dian"></span>
                             </div>
                         </div>
-                            <MyCreateCollection isShowTwo={this.state.isShowTwo}></MyCreateCollection>
+                            <MyCreateCollection {...this.props} isShowTwo={this.state.isShowTwo}></MyCreateCollection>
                     </div>
                 </div>
             </div>

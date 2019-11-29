@@ -40,12 +40,16 @@ class MyCreateLove extends React.Component{
         )
     }
     componentDidMount(){
-        this.$axios.get("/likelist",{
+        this.$axios.get("/user/record",{
             params:{
-                uid:506866023
+                uid:506866023,
+                type:0
             }
         }).then(({data})=>{
-            console.log("Like:",data)
+    
+                // console.log(data)
+            
+            
         })
     }
 }
