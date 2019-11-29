@@ -13,11 +13,32 @@
       "unicode_decimal": 58916
     },
     {
+      "icon_id": "554192",
+      "name": "用户",
+      "font_class": "iconset0203",
+      "unicode": "e666",
+      "unicode_decimal": 58982
+    },
+    {
       "icon_id": "627007",
       "name": "duihao",
       "font_class": "duihao",
       "unicode": "e6bf",
       "unicode_decimal": 59071
+    },
+    {
+      "icon_id": "645039",
+      "name": "搜索",
+      "font_class": "sousuo",
+      "unicode": "e64c",
+      "unicode_decimal": 58956
+    },
+    {
+      "icon_id": "688059",
+      "name": "播放 三角形",
+      "font_class": "triangle",
+      "unicode": "e769",
+      "unicode_decimal": 59241
     },
     {
       "icon_id": "693214",
@@ -55,6 +76,13 @@
       "unicode_decimal": 59084
     },
     {
+      "icon_id": "1167280",
+      "name": "视频",
+      "font_class": "shipin",
+      "unicode": "e637",
+      "unicode_decimal": 58935
+    },
+    {
       "icon_id": "1327500",
       "name": "right-arrow",
       "font_class": "right-arrow",
@@ -90,6 +118,13 @@
       "unicode_decimal": 59405
     },
     {
+      "icon_id": "1987009",
+      "name": "用户",
+      "font_class": "user",
+      "unicode": "e6a6",
+      "unicode_decimal": 59046
+    },
+    {
       "icon_id": "2533204",
       "name": "我的收藏",
       "font_class": "wodeshoucang",
@@ -116,6 +151,13 @@
       "font_class": "jiantou_right",
       "unicode": "e602",
       "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "3404120",
+      "name": "音乐",
+      "font_class": "yinyuered",
+      "unicode": "e60c",
+      "unicode_decimal": 58892
     },
     {
       "icon_id": "3949471",
@@ -188,11 +230,25 @@
       "unicode_decimal": 59820
     },
     {
+      "icon_id": "8034739",
+      "name": "网易云音乐",
+      "font_class": "wangyiyunyinle2",
+      "unicode": "eb25",
+      "unicode_decimal": 60197
+    },
+    {
       "icon_id": "8165730",
       "name": "评论",
       "font_class": "pinglun",
       "unicode": "e62a",
       "unicode_decimal": 58922
+    },
+    {
+      "icon_id": "8260492",
+      "name": "喇叭",
+      "font_class": "laba",
+      "unicode": "e60e",
+      "unicode_decimal": 58894
     },
     {
       "icon_id": "8807360",

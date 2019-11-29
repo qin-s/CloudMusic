@@ -4,7 +4,8 @@ class MySongList extends React.Component{
     constructor(){
         super();
         this.state = {
-            songList:{}
+            songList:{},
+            userInfo:{}
         }
     }
     render(){
@@ -28,10 +29,10 @@ class MySongList extends React.Component{
                             <p>{this.state.songList.name}</p>
                             <div className="my-info-name">
                                 <p>
-                                    <img src="http://p1.music.126.net/VnZiScyynLG7atLIZ2YPkw==/18686200114669622.jpg?param=200y200" alt=""/>
+                                    <img src={this.state.userInfo.avatarUrl} alt=""/>
                                 </p>
                                 <div className="my-name">
-                                    文字文字
+                                    {this.state.userInfo.nickname}
                                     <span className="iconfont icon-youjiantou"></span>
                                 </div>
                             </div>
@@ -102,6 +103,17 @@ class MySongList extends React.Component{
                 songList:data.playlist
             })
             console.log(1111122222,this.state.songList.tracks)
+        })
+        //获取用户信息
+        this.$axios.get("/user/detail",{
+            params:{
+                uid:506866023
+            }
+        }).then(({data})=>{
+            console.log("用户信息",data.profile)
+            this.setState({
+                userInfo:data.profile
+            })
         })
     }
 }
