@@ -19,23 +19,23 @@ function App() {
                 <Route path={"/account"} exact render={()=><GuardRouter component={Account}></GuardRouter>}></Route>
             <nav>
                 <NavLink exact to={"/discover"}  className={"App-link"} activeClassName={"App-active"}>
-                    <span className="iconfont icon-zuijinbofang"></span>
+                    <span className="iconfont icon-wangyiyunyinle2"></span>
                     <p>发现</p>
                 </NavLink>
                 <NavLink to={"/video"} exact className={"App-link"} activeClassName={"App-active"}>
-                    <span className="iconfont icon-zuijinbofang"></span>
+                    <span className="iconfont icon-shipin"></span>
                     <p>视频</p>
                 </NavLink>
                 <NavLink exact to={"/"}  className={"App-link"} activeClassName={"App-active"}>
-                    <span className="iconfont icon-zuijinbofang"></span>
+                    <span className="iconfont icon-yinyuered"></span>
                     <p>我的</p>
                 </NavLink>
                 <NavLink to={"/yuncun"}  className={"App-link"} activeClassName={"App-active"}>
-                    <span className="iconfont icon-zuijinbofang"></span>
+                    <span className="iconfont icon-iconset0203"></span>
                     <p>云村</p>
                 </NavLink>
                 <NavLink to={"/account"}  className={"App-link"} activeClassName={"App-active"}>
-                    <span className="iconfont icon-zuijinbofang"></span>
+                    <span className="iconfont icon-user"></span>
                     <p>账号</p>
                 </NavLink>
             </nav>

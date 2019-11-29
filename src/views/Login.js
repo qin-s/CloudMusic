@@ -59,7 +59,7 @@ import "../assets/css/login-css/login.css"
 						// if(data.code === 502){
 						// 	alert(data.msg)
 						// }
-						this.props.history.push("/my")
+						this.props.history.push("/")
 					}else{
 						this.props.history.push("/zhuce")
 					}
