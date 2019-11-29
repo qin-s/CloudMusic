@@ -13,5 +13,9 @@ export default function banner(state=stateBanner,{type,payload}){
         // console.log(payload.newdish,"dis")
         state.newdish = payload.newdish
     }
+    if(type === action.esscloud){
+        // console.log(payload)
+        state.esscloud = payload.esscloud
+    }
     return state
 }
