@@ -12,7 +12,7 @@ class MyCreateCollection extends React.Component{
             <ul>
                 {
                     this.state.list.map(v=>(
-                         <li key={v.id}>
+                         <li key={v.id} onClick={()=>this.props.history.push({pathname:"/songlist",state:{"id":v.id}})}>
                             <img src={v.coverImgUrl}  alt="" />
                             <div className="create-song-list-right">
                                 <div className="create-song-title">
@@ -23,30 +23,12 @@ class MyCreateCollection extends React.Component{
                         </li>
                     ))
                 }
-               
-                {/* <li>
-                    <img src={"http://p1.music.126.net/tNZ0APFG0RMiEqVIy81Irg==/109951164503526066.jpg?param=50y50&quality=100"} alt="" />
-                    <div className="create-song-list-right">
-                        <div className="create-song-title">
-                            <span>一村</span>
-                            <p>273首</p>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <img src={"http://p1.music.126.net/tNZ0APFG0RMiEqVIy81Irg==/109951164503526066.jpg?param=50y50&quality=100"} alt="" />
-                    <div className="create-song-list-right">
-                        <div className="create-song-title">
-                            <span>明月</span>
-                            <p>273首</p>
-                        </div>
-                    </div>
-                </li> */}
             </ul>
         </div>
         )
     }
     componentDidMount(){
+        // console.log(this.props);
         this.$axios.get("/user/playlist",{
             params:{
                 uid:506866023
@@ -55,7 +37,7 @@ class MyCreateCollection extends React.Component{
             this.setState({
                 list:data.playlist
             })
-            console.log("Collection:",data.playlist)
+            // console.log("Collection:",data.playlist)
         })
     }
 }
