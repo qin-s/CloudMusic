@@ -170,7 +170,8 @@ aside{
     margin-top:80px;
 }
 .esscloud .essdiv{
-    border:8px solid #ccc;
+    height:8px;
+    background:#ccc;
     opacity: 0.8;
     margin-bottom:30px;
 }
@@ -201,7 +202,7 @@ aside{
     margin:20px 0;
 }
 .cloudmsg{
-    width:600px;
+  
     word-break:break-all;
 }
 .goodshare{
