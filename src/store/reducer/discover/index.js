@@ -1,6 +1,5 @@
 import stateBanner from '../../state/discover/'
 import action from '../../actionType/discover'
-import { bindActionCreators } from 'C:/Users/Administrator/AppData/Local/Microsoft/TypeScript/3.6/node_modules/redux';
 export default function banner(state=stateBanner,{type,payload}){
     state = JSON.parse(JSON.stringify(state))
     if(type === action.bannerType){
@@ -13,6 +12,10 @@ export default function banner(state=stateBanner,{type,payload}){
     if(type === action.newdish){
         // console.log(payload.newdish,"dis")
         state.newdish = payload.newdish
+    }
+    if(type === action.esscloud){
+        // console.log(payload)
+        state.esscloud = payload.esscloud
     }
     return state
 }
