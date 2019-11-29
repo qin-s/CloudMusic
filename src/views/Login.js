@@ -15,7 +15,7 @@ import "../assets/css/login-css/login.css"
 		
 		<div className="t-login">
 			<input type="text" placeholder="请输入手机号" ref="login"/><br/>
-			<input type="text" placeholder="请输入密码" ref="password"/><br/>
+			<input type="text" placeholder="请输入密码" type="password" ref="password"/><br/>
 			<input type="button" value="登录" onClick={this.props.getPhone.bind(this)}/>
 		</div>
 		
@@ -61,6 +61,7 @@ import "../assets/css/login-css/login.css"
 						// }
 						this.props.history.push("/")
 					}else{
+						
 						this.props.history.push("/zhuce")
 					}
 				})

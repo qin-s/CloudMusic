@@ -1,0 +1,32 @@
+*{
+    margin:0;
+    padding:0
+    
+}
+body{
+    text-align:center;
+}
+.yan .t-one1{
+    width:500px;
+    border-radius: 30px;
+    text-align:center;
+    color:red;
+    font-size:40px;
+    outline: none;
+    margin:20px auto;
+}
+.t-input{
+    margin-top:300px;
+}
+.t-three{
+    margin:20px auto;
+    border:1px solid red;
+    width:450px;
+    height:80px;
+    border-radius: 30px;
+    text-align:center;
+    color:red;
+    font-size:35px;
+    outline: none;
+
+}

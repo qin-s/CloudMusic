@@ -11,20 +11,21 @@ class VideoRecommend extends React.Component{
                             <WingBlank size="lg">
                                 <WhiteSpace size="lg" />
                                 <Card>
-
                                     <Card.Body>
-                                        <div style={{textAlign:"center"}}>
+                                        <div className={"videoRec-mvDetail"} style={{textAlign:"center"}}>
+                                            <p className={"videoRec-playCount"}><span className={"iconfont icon-wodediantai "}></span>{v.playCount}</p>
+                                            <p className={"videoRec-duration"}><span className={"iconfont icon-wodediantai "}></span>{Math.floor(v.duration/1000/60)}:{v.duration/1000%60}</p>
                                             <img style={{
                                                 width:"100%",
                                                 height:"300px"
                                             }} alt={""} onClick={()=>this.props.history.push("/videoDetail/"+v.id)} src={v.picUrl} />
                                         </div>
                                     </Card.Body>
-                                    <Card.Footer style={{fontSize:"16px"}} content={v.copywriter}   />
+                                    <Card.Footer style={{fontSize:"16px",color:"#000"}} content={v.copywriter}   />
                                     <Card.Header
                                         title={v.name}
-                                        style={{fontSize:"18px",color:"#000"}}
-                                        thumb="https://gw.alipayobjects.com/zos/rmsportal/MRhHctKOineMbKAZslML.jpg"
+                                        style={{fontSize:"16px",color:"#eee"}}
+                                        thumb=""
                                         extra={<span></span>}
                                     />
                                 </Card>
@@ -50,6 +51,7 @@ function mapDispatchToProps(dispatch){
         getRecommend(){
             dispatch(()=>{
                 this.$axios.get("/personalized/mv").then(({data})=>{
+                    console.log(data)
                     dispatch({
                         type:"UP_RECOMMEND_LIST",
                         payload:{
