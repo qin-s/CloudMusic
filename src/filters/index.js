@@ -8,6 +8,14 @@ class Tools {
             +date.getMinutes().toString().padStart(2,0) + ":"
             +date.getSeconds().toString().padStart(2,0);
     }
+    static daymonth(v){
+        const date = new Date(v);
+        return  (date.getMonth()+1).toString().padStart(2,0) +"/"+ date.getDate().toString().padStart(2,0)
+
+    }
+    static artists(v){
+        return v+"123"
+    }
     static price(v){
         return "￥"+v.toFixed(2);
     }

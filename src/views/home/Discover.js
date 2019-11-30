@@ -46,7 +46,7 @@ import {
                 <aside>
                     <div className={"day"}>
                         <ul>
-                            <li><i className={"iconfont icon-wodediantai "}></i> <p>每日推荐</p> </li>
+                            <li onClick={()=>{this.props.history.push("/daysongs")}}><i className={"iconfont icon-wodediantai "}></i> <p>每日推荐</p> </li>
                             <li><i className={"iconfont icon-wodediantai "}></i> <p>歌单</p> </li>
                             <li><i className={"iconfont icon-wodediantai "}></i> <p>排行榜</p> </li>
                             <li><i className={"iconfont icon-wodediantai "}></i> <p>电台</p> </li>
@@ -128,7 +128,7 @@ import {
                             
                                 <div className={"goodshare"}>
                                     <ul>
-                                    <img style={{width:"20px",height:"20px",borderRadius:"10px",marginLeft:"110px",marginTop:"-1px"}} src={v.user.avatarUrl} alt=""/>
+                                    <img style={{width:"20px",height:"20px",borderRadius:"10px",marginLeft:"100px",marginTop:"-1px"}} src={v.user.avatarUrl} alt=""/>
                                         <li> <i className={"iconfont icon-wodediantai "}></i> {v.insiteForwardCount} </li>
                                         <li><i className={"iconfont icon-wodediantai "}></i> {v.info.commentCount} </li>
                                         <li><i className={"iconfont icon-wodediantai "}></i> {v.info.likedCount} </li>
@@ -148,7 +148,7 @@ import {
         )
     }
     componentDidUpdate(){
-        console.log(this.props.esscloudList,123123123)
+        // console.log(this.props.esscloudList,123123123)
     }
     componentDidMount(){
         this.props.getBanner.call(this) 
@@ -181,6 +181,7 @@ function mapDispatchToProps(dispatch){
                         type:1
                     }
                 }).then(({data})=>{
+                    // console.log(data,"banner")
                     dispatch({
                         type:"GET_BANNER",
                         payload:{
@@ -257,6 +258,7 @@ function mapDispatchToProps(dispatch){
                 })
             })
         },
+     
 
     }
 
