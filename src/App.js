@@ -10,6 +10,7 @@ import Index from "./views/Index";
 import VideoDetail from "./views/home/video/VideoDetail.js"
 import MySongList from "./views/home/my/MySongList"
 import RecentPlay from "./views/home/my/RecentPlay"
+import VideoRanking from "./views/home/video/VideoRanking"
 function App() {
   return (
     <div className="App">
@@ -18,6 +19,7 @@ function App() {
             <Route path={"/songlist"} component={MySongList}></Route>
             <Route path={"/login"} component={Login}></Route>
             <Route path={"/videoDetail/:id"} component={VideoDetail}></Route>
+            <Route path={"/videoRanking"} component={VideoRanking}></Route>
             <Route path={"/"} component={Index}></Route>
         </Switch>
     </div>
