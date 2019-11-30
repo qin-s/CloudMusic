@@ -113,7 +113,7 @@ import {
                     {
                         this.props.esscloudList.map(v=>(
                            <div className={"cloudpic"} key={v.id}>
-                        <div className={"cloudmsg"}> {JSON.parse(v.json).msg} <img style={{width:"20px",height:"20px",borderRadius:"10px",marginTop:"-1px"}} src={v.user.avatarUrl} alt=""/></div> 
+                        <div className={"cloudmsg"}> {JSON.parse(v.json).msg} </div> 
 
                         
 
@@ -125,9 +125,10 @@ import {
                                         <img  src={v.originUrl} alt=""/>
                                     </Fragment>
                                ))}
-                               <br/>
+                            
                                 <div className={"goodshare"}>
                                     <ul>
+                                    <img style={{width:"20px",height:"20px",borderRadius:"10px",marginLeft:"110px",marginTop:"-1px"}} src={v.user.avatarUrl} alt=""/>
                                         <li> <i className={"iconfont icon-wodediantai "}></i> {v.insiteForwardCount} </li>
                                         <li><i className={"iconfont icon-wodediantai "}></i> {v.info.commentCount} </li>
                                         <li><i className={"iconfont icon-wodediantai "}></i> {v.info.likedCount} </li>
