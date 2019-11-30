@@ -1,3 +1,6 @@
 export default {
-    banner:[]
+    banner:[],
+    rdSongs:[],
+    newdish:[],
+    esscloud:[]
 }

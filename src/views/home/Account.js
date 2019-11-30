@@ -1,9 +1,9 @@
-import "../../assents/css/account/account.css";
+import "../../assets/css/account/account.css";
 import React from "react";
 import {bindActionCreators} from "redux";
 import {connect} from "react-redux";
 import accountCreator from "../../store/actionCreater/account"
-class Account extends React.Component {
+class Account extends React.Component{
     render() {
         let userInfo = this.props.userInfo;
         return (

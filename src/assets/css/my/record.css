@@ -1,0 +1,177 @@
+/* 单曲、歌曲、收藏 */
+.my-record{
+    padding: 0 10px;
+}
+.my-record .my-record-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+.my-record .my-record-header p{
+    font-size: 32px;
+}
+.my-record .my-record-header .record-goback{
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+}
+.my-record .my-record-header .record-goback span{
+    font-size: 42px;
+    margin-right: 25px;
+}
+.my-record .my-record-header .record-icon span{
+    font-size: 36px;
+}
+.my-record .my-record-header .record-icon .icon-sousuo{
+    font-size: 40px;
+    margin-right: 65px;
+}
+.tab-content{
+    padding: 25px 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+.tab-content .record-all-nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.tab-content .record-all-nav .record-all-nav-play{
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+}
+.tab-content .record-all-nav span{
+    font-size: 28px;
+    margin-right: 15px;
+}
+.tab-content .record-all-nav i{
+    font-size: 18px;
+    color: silver;
+}
+.record-all-nav-choose{
+    font-size: 24px;
+    padding-right: 10px;
+    color: #333333;
+    font-weight: 100;
+}
+.tab-content .record-all-nav .record-all-nav-choose .icon-sanheng{
+    font-size: 24px;
+}
+.tab-content ul{
+    width: 100%;
+}
+.tab-content ul li{
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+    width: 100%;
+}
+.tab-content ul li>span{
+    font-size: 42px;
+    color: red;
+}
+.tab-content ul li img{
+    width: 100px;
+    height: 100px;
+}
+.tab-content ul li .record-song{
+    width: 100%;
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: space-between;
+}
+.tab-content ul li .record-song .record-song-name{
+    padding: 15px;
+    font-size: 22px;
+}
+.record-song-creator{
+    display: flex;
+    color: silver;
+    padding-top: 15px;
+}
+.tab-content ul li .record-song .record-song-creator .icon-duihao{
+    font-size: 18px;
+    width: 20px;
+    text-align: center;
+    line-height:20px;
+    color: white;
+    background: rgba(20, 175, 223, 0.589);
+    display: block;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+.tab-content ul li .record-song .record-song-creator i{
+    font-size: 17px;
+}
+.tab-content ul li .record-song>span{
+    font-size: 34px;
+    padding-right: 10px;
+}
+/* 暂无记录 */
+.tab-content .none-record{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    font-size: 28px;
+    color: chocolate;
+}
+
+
+/* 本地音乐中的歌手、专辑、文件夹 */
+.singer{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-top: 25px;
+}
+.singer img{
+    width: 130px;
+    height: 120px;
+    border-radius: 50%;
+}
+.singer .singer-info{
+    width: 100%;
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: space-between;
+}
+.singer .singer-info .singer-name{
+    padding: 15px;
+    font-size: 26px;
+    color: #333333;
+    padding-top: 15px;
+}
+.singer .singer-info .singer-name>i{
+    color: rgb(164, 167, 170);
+    display: block;
+    margin-top: 15px;
+    font-size: 20px;
+}
+.singer .singer-info .icon-laba{
+    font-size: 34px;
+    padding-right: 10px;
+    color: red;
+}
+
+
+/* 我的电台 */
+.radio-station{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    width: 100%;
+    height: 1000px;
+    /* position: relative;
+    position: absolute; */
+    color: rgb(224, 144, 24);
+    background: rgb(250, 249, 248);
+}
+
+/* 播放量 */

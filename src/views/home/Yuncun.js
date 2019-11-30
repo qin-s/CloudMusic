@@ -1,9 +1,44 @@
+import { Tabs, WhiteSpace } from 'antd-mobile';
+import Guang from "../../components/yuncun/Guang"
 import React from "react";
-class YunCun extends React.Component{
-    render(){
-        return (
-            <div>云村</div>
-        )
-    }
+import Allmv from "../../components/yuncun/mv"
+
+
+export default class Yuncun extends React.Component {
+
+
+  render() {
+    const tabs = [
+      { title: '广场' },
+      { title: '关注' },
+ 
+    ];
+
+    return (
+      <div>
+        <WhiteSpace />
+        <Tabs tabs={tabs}  renderTabBar={props => <Tabs.DefaultTabBar {...props} page={3} />}>
+          
+        
+          <Guang></Guang>
+          <Allmv></Allmv>        
+        </Tabs>
+        <WhiteSpace />
+      </div>
+    );
+  }
 }
-export default YunCun
+
+// ReactDOM.render(<Demo />, mountNode);
+
+
+// function mapStateToProps(tate){
+//     this.$axios.get("/mv/url",{
+//         params:{
+//             id
+//         }
+//     }).then(({data1})=>{
+//         console.log(data1)
+//     })
+// }
+// export default connect(mapStateToProps,mapDispatchToProps)(Yuncun)

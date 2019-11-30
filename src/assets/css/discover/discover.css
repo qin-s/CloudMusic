@@ -1,0 +1,218 @@
+body,ul,ol,h1,h2,h3,h4,h5,input,p{
+	margin: 0;
+	padding: 0;
+}
+
+a{
+	text-decoration: none; 
+}
+li{
+	list-style: none; 
+}
+img{
+	border: 0;
+	vertical-align: top;  
+}
+.clearbox:after{
+	content: "";
+	display: block;
+	clear: both;
+	height: 0;
+	overflow: hidden;
+	visibility: hidden;
+}
+.clearbox{
+	zoom: 1;
+}
+
+.swiper-container{
+    /* --swiper-theme-color: #ff6600; */
+    --swiper-pagination-color: red;/* 两种都可以 */
+}
+
+
+.nav{
+    margin-top:30px;
+}
+.nav .ull{
+    display:flex;
+    justify-content:space-between;
+
+}
+.nav .ull div:nth-child(2){
+    color:red;
+    width:70%;
+    background:#666;
+    opacity: 0.3;
+    border-radius:32px;
+    display: flex;
+    align-items: center;
+ 
+}
+.adisco{
+    margin:0 auto;
+}
+.mid .nan{
+    font-weight:normal;
+    font-size:36px;
+    margin-left:10px;
+    color:black;
+}
+.midd{
+    margin:0 auto;
+    font-size:40px;
+    color:black;
+}
+.left,.right{
+    font-size:60px;
+}
+.song{
+    color:red;
+}
+article{
+    margin-top:40px;
+}
+.banner{
+    position: relative;
+    text-align: center;
+}
+.banner img{
+    /* width:100px; */
+    width:710px;
+    border-radius: 15px;
+}
+.rightdown{
+    /* background:rgb(20, 155, 245); */
+    position:absolute;
+    padding:0 20px;
+    border-radius: 15px 0 15px 1px;
+    right:20px;
+    color:#fff;
+    bottom:0;
+}
+
+aside{
+    margin-top:30px
+}
+.day ul{
+    display: flex;
+    justify-content: space-around;
+    text-align:center;
+}
+.day ul li i{
+    font-size:86px;
+    border-radius: 48px;
+    background:red;
+    color:#fff;
+    padding:5px 5px;
+}
+.day ul li p{
+    margin-top:20px;
+}
+.songs{
+    margin-top:40px;
+    padding:0 25px;
+}
+
+.long{
+    margin-top:30px;
+    width:750px;
+    border:1px solid #ccc;
+    opacity: 0.8;
+}
+.songs div:nth-child(1){
+    color:#666;
+    opacity: 0.7;
+    font-weight:bold;
+}
+.songs div:nth-child(2){
+    margin-top:5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.songs .pleft{
+    font-weight:bold;
+    font-size:28px;
+   
+}
+.songs .pright{
+    padding:5px 10px;
+    border-radius:18px;
+    border:2px solid #666;
+}
+.songs .songList{
+    margin-top:10px;
+}
+.songs .songList ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.songs .songList ul li {
+    width:220px;
+    margin-top:30px;
+    position: relative;
+}
+.songs .songList ul li img{
+    width:220px;
+    border-radius:10px;
+}
+.songs ul .playcount{
+    position:absolute;
+    right:0;
+    top:0;
+    color:#fff;
+    margin-right:10px;
+}
+
+.esscloud{
+    margin-top:80px;
+}
+.esscloud .essdiv{
+    height:8px;
+    background:#ccc;
+    opacity: 0.8;
+    margin-bottom:30px;
+}
+.esscloud .cloudcontent{
+    display:flex;
+    justify-content:space-between;
+    padding:0 20px;
+}
+.esscloud .cloudcontent p{
+    font-weight:bold;
+    font-size:25px;
+}
+.essborder{
+    border:1px solid #ccc;
+    margin:30px 0;
+}
+.cloudpic img{
+    width:410px;
+    height:300px;
+}
+.cloudpic{
+    margin-left:30px;
+    margin-top:50px;
+}
+.cloudsolid{
+    border:1px solid #666;
+    opacity: 0.2;
+    margin:20px 0;
+}
+.cloudmsg{
+  
+    word-break:break-all;
+}
+.goodshare{
+    margin-top:20px;
+}
+.goodshare ul{
+    display:flex;
+  
+  
+}
+.goodshare ul li {
+    margin:5px 20px;
+}
