@@ -141,6 +141,7 @@ aside{
 
 .esscloud{
     margin-top:80px;
+    text-align:center;
 }
 .esscloud .essdiv{
     height:8px;
@@ -162,8 +163,8 @@ aside{
     margin:30px 0;
 }
 .cloudpic img{
-    width:410px;
-    height:300px;
+    width:610px;
+    height:500px;
 }
 .cloudpic{
     margin-left:30px;
@@ -175,8 +176,11 @@ aside{
     margin:20px 0;
 }
 .cloudmsg{
-  
+    width:610px;
+    margin:0 auto;
+    text-align:left;
     word-break:break-all;
+    margin-bottom:10px;
 }
 .goodshare{
     margin-top:20px;

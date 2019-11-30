@@ -1,0 +1,23 @@
+.cm_account_center_fragment{
+    display:flex;
+    justify-content: space-around;
+    background-color: #FFFFFF;
+    padding:30px;
+}
+.cm_account_center_fragment div{
+    /* border:2px solid red; */
+    width:25%;
+    text-align: center;
+}
+.cm_account_center_fragment i{
+    font-size:60px;
+    color:#FF3A3B;
+}
+.cm_account_center_fragment b{
+    font-size:60px;
+    color:#FF3A3B;
+}
+.cm_account_center_fragment p{
+    margin-top:20px;
+    font-size: 30px;
+}

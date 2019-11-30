@@ -7,7 +7,7 @@ import Discover from "./home/Discover";
 import My from "./home/My";
 import Account from "./home/Account";
 import Video from "./home/Video";
-import GuardRouter from "../router/GuardRouter"
+import GuardRouter from "../router/GuardRouter";
 import YunCun from "./home/Yuncun";
 function App() {
     return (

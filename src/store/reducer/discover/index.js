@@ -17,5 +17,9 @@ export default function banner(state=stateBanner,{type,payload}){
         // console.log(payload)
         state.esscloud = payload.esscloud
     }
+    if(type === action.daysongs){
+        // console.log(payload,"red")
+        state.daysongs = payload.daysongs
+    }
     return state
 }

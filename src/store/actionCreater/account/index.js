@@ -1,19 +1,23 @@
-export const upResult = (payload) => {
+import axios from "axios";
+export const upGetUserInfo = (userInfo) =>{
     return {
         type:"GET_USER_INFO",
-        payload
+        payload:{
+            userInfo
+        }
     }
 };
-export default {
-    getUserInfo(id){
+
+export default{
+    getUserInfo(){
         return (dispatch)=>{
-            this.$axios.get("/user/detail",{
+            axios.get("/user/detail",{
                 params:{
-                    id
+                    uid:localStorage.uid
                 }
-            }).then(data=>{
-                console.log(data);
-            })
+            }).then(({data})=>{
+                dispatch(upGetUserInfo(data.profile))
+            });
         }
     }
 }

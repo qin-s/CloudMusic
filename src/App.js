@@ -15,6 +15,7 @@ import VideoRanking from "./views/home/video/VideoRanking"
 import LocalMusic from "./views/home/my/LocalMusic"
 import RadioStation from "./views/home/my/RadioStation"
 import MyCollect from "./views/home/my/MyCollect"
+import DaySongs from './views/home/discover/DaySongs';
 function App() {
   return (
     <div className="App">
@@ -27,7 +28,7 @@ function App() {
             <Route path={"/login"} component={Login}></Route>
             <Route path={"/zhuce"} component={Zhuce}></Route>
             <Route path={"/videoDetail/:id"} component={VideoDetail}></Route>
-            <Route path={"/videoRanking"} component={VideoRanking}></Route>
+            <Route path={"/daysongs"} component={DaySongs}></Route>
             <Route path={"/"} component={Index}></Route>
         </Switch>
     </div>
