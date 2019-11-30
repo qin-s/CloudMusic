@@ -1,8 +1,16 @@
 import React from "react"
 import "../../../assets/css/my/record.css"
 import { Tabs, WhiteSpace } from 'antd-mobile';
+import MySongRecord from "../../../components/my/myRecord/MySongRecord"
+import MyLivingList from "../../../components/my/myRecord/MyLivingList"
+import MyVideoList from "../../../components/my/myRecord/MyVideoList";
 class RecentPlay extends React.Component{
-    
+    constructor(){
+        super();
+        this.state = {
+            userRecordList:[]
+        }
+    }
     render(){
         const tabs = [
                   { title: '歌曲' },
@@ -30,75 +38,28 @@ class RecentPlay extends React.Component{
                         tabBarUnderlineStyle={{
                             backgroundColor:"red",
                             border:"1px solid red",
-                            }} onTabClick={(tab)=>{console.log(tab.title);
                             }}> 
                             {/* {this.renderContent} */}
-                            <div className="tab-content">
-                                <div className="record-all-nav">
-                                    <div className="record-all-nav-play">
-                                        <span className="iconfont icon-bofang1"></span>
-                                        播放全部
-                                        <i>(共1首)</i>
-                                    </div>
-                                    <div className="record-all-nav-choose">
-                                        <span className="iconfont icon-sanheng"></span>
-                                        <b>多选</b>
-                                    </div>
-                                </div>
-                                <ul>
-                                    <li>
-                                        <img src="http://p2.music.126.net/slpd09Tf5Ju82Mv-h8MP4w==/3440371884651965.jpg?param=40y40" alt="" />
-                                        <div className="record-song">
-                                            <div className="record-song-name">
-                                                <p>说好不哭</p>
-                                                <div className="record-song-creator">
-                                                    <span className="iconfont icon-duihao"></span>
-                                                    <i>周杰伦</i>
-                                                </div>
-                                            </div>
-                                            <span className="iconfont icon-caidan-dian"></span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src="http://p2.music.126.net/slpd09Tf5Ju82Mv-h8MP4w==/3440371884651965.jpg?param=40y40" alt="" />
-                                        <div className="record-song">
-                                            <div className="record-song-name">
-                                                <p>说好不哭</p>
-                                                <div className="record-song-creator">
-                                                    <span className="iconfont icon-duihao"></span>
-                                                    <i>周杰伦</i>
-                                                </div>
-                                            </div>
-                                            <span className="iconfont icon-caidan-dian"></span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src="http://p2.music.126.net/slpd09Tf5Ju82Mv-h8MP4w==/3440371884651965.jpg?param=40y40" alt="" />
-                                        <div className="record-song">
-                                            <div className="record-song-name">
-                                                <p>说好不哭</p>
-                                                <div className="record-song-creator">
-                                                    <span className="iconfont icon-duihao"></span>
-                                                    <i>周杰伦</i>
-                                                </div>
-                                            </div>
-                                            <span className="iconfont icon-caidan-dian"></span>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
+                            <MySongRecord {...this.props}></MySongRecord>
+                            <MyLivingList {...this.props}></MyLivingList>
+                            <MyVideoList {...this.props}></MyVideoList>
                         </Tabs>
                     <WhiteSpace />
                 </div>
             </div>
         )
     }
-    // renderContent = tab =>(   
-    // <div style={{ display: 'flex', backgroundColor: 'red' }}>
-    //         <div className="">
-    //         {tab.title}
-    //         </div>
-    //  </div>
-    // )
+    componentDidMount(){
+        // this.getSongRecordList();
+        // console.log(this.props.location.state.userRecordList)
+        // this.$axios.get("/user/record",{
+        //     params:{
+        //         uid:506866023,
+        //         type:1
+        //     }
+        // }).then(({data})=>{
+        //     console.log("用户播放列表",data);
+        // })
+    }
 }
 export default RecentPlay
