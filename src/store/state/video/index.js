@@ -6,5 +6,8 @@ export default {
     videoNetEase:[],
     videoListenbgm:[],
     videoScene:[],
-    videoAcgMusic:[]
+    videoAcgMusic:[],
+    videoCover:[],
+    videoDance:[],
+    videoGame:[]
 }

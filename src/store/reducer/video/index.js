@@ -25,5 +25,14 @@ export default (state=initState,{type,payload})=>{
     if(type === "UP_ACGMUSIC_LIST"){
         state.videoAcgMusic = payload.videoAcgMusic
     }
+    if(type === "UP_COVER_LIST"){
+        state.videoCover = payload.videoCover
+    }
+    if(type === 'UP_DANCE_LIST'){
+        state.videoDance = payload.videoDance
+    }
+    if(type === 'UP_GAME_LIST'){
+        state.videoGame = payload.videoGame
+    }
     return state
 }

@@ -2,28 +2,31 @@ import React from "react"
 import {
     connect
 } from "react-redux"
+import daiyutong from  "../../assets/images/daiyutong.jpg"
 import "../../assets/css/video/video.css"
 import { Tabs, WhiteSpace } from 'antd-mobile';
 import VideoMv from "../../components/video/VideoMv"
-import VideoAll from "../../components/video/VideoAll"
-import VideoNew from "../../components/video/VideoNew";
-import VideoNetEase from "../../components/video/VideoNetEase";
-import VideoEvery from "../../components/video/VideoEvery";
 import VideoListenBGM from "../../components/video/VideoListenBGM";
 import VideoScene from "../../components/video/VideoScene";
-import VideoAcgMusic from "../../components/video/VideoAcgMusic"
+import VideoAcgMusic from "../../components/video/VideoAcgMusic";
+import VideoCover from "../../components/video/VideoCover"
+import VideoDance from "../../components/video/VideoDance"
+import VideoGame from "../../components/video/VideoGame"
+import VideoSquare from "../../components/video/VideoSquare"
 class Video extends React.Component{
     constructor(){
         super();
         this.state={
             arr:[
-                { title: 'MV' },
-                {title:'现场'},
-                { title: 'ACG音乐' },
                 { title: '听BGM' },
-                { title: '最新' },
-                { title: '网易出品' },
-                {title:'视频'}
+                {title:'现场'},
+                {title:'戴羽彤'},
+                {title:'翻唱'},
+                {title:'广场'},
+                { title: 'MV' },
+                { title: '舞蹈' },
+                { title: 'ACG音乐' },
+                { title: '游戏' },
             ],
             num:0,
         }
@@ -36,14 +39,17 @@ class Video extends React.Component{
                       tabBarActiveTextColor="red"
                       tabBarUnderlineStyle={{borderBottomColor:"#f00",backgroundColor:"#fff"}}
                       tabs={this.state.arr} renderTabBar={props => <Tabs.DefaultTabBar {...props} page={3} />}>
+                          <VideoListenBGM {...this.props}></VideoListenBGM>
+                          <VideoScene {...this.props}></VideoScene>
+                            <div style={{width:"100%",textAlign:"center"}}> <img src={daiyutong} style={{
+                                width:"100%"
+                            }} /></div>
+                    <VideoCover {...this.props}></VideoCover>
+                    <VideoSquare {...this.props}></VideoSquare>
                     <VideoMv {...this.props}></VideoMv>
-                    <VideoScene {...this.props}></VideoScene>
+                    <VideoDance {...this.props}></VideoDance>
                     <VideoAcgMusic {...this.props}></VideoAcgMusic>
-                    <VideoListenBGM {...this.props}></VideoListenBGM>
-                    <VideoEvery {...this.props}></VideoEvery>
-                    <VideoAll {...this.props}></VideoAll>
-                    <VideoNew {...this.props}></VideoNew>
-                    <VideoNetEase {...this.props}></VideoNetEase>
+                    <VideoGame {...this.props}></VideoGame>
                 </Tabs>
             </div>
         )
@@ -52,6 +58,16 @@ class Video extends React.Component{
         (<div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center',width:"100px", height: '200px',lineHeigth:'40px', backgroundColor: '#fff' }}>
             <p>Content of {tab.title}</p>
         </div>);
+        async componentDidMount(){
+            const {data} = await this.$axios.get("/video/group/list")
+            // const {data} = await this.$axios.get("/personalized/privatecontent")
+            // const {data} = await this.$axios.get("/video/group",{
+            //     params:{
+            //         id:26141
+            //     }
+            // })
+            console.log(data)
+        }
 }
 function mapStateToProps(state,props){
     return {
