@@ -1,9 +1,11 @@
+
 import "../../assets/css/account/account.css";
 import React from "react";
 import {bindActionCreators} from "redux";
 import {connect} from "react-redux";
-import accountCreator from "../../store/actionCreater/account"
-class Account extends React.Component{
+import AccountCenter from "../../components/account/AccountCenter"
+import accountCreator from "../../store/actionCreater/account";
+class Account extends React.Component {
     render() {
         let userInfo = this.props.userInfo;
         return (
@@ -45,24 +47,21 @@ class Account extends React.Component{
                         </div>
                     </div>
                 </div>
-                    <div className={"cm_header_member"}>
-                        <div className={"cm_header_member_div"}>
-                            <span>开通黑胶VIP</span>
-                            <p>新客仅5元<b className={"iconfont icon-right-arrow"}></b></p>
-                        </div>
-                        <div>
-                            <span>会员中心</span>
-                            <p>VIP享超12向特权<b className={"iconfont icon-right-arrow"}></b></p>
-                        </div>
+                <div className={"cm_header_member"}>
+                    <div className={"cm_header_member_div"}>
+                        <span>开通黑胶VIP</span>
+                        <p>新客仅5元<b className={"iconfont icon-right-arrow"}></b></p>
                     </div>
-
+                    <div>
+                        <span>会员中心</span>
+                        <p>VIP享超12向特权<b className={"iconfont icon-right-arrow"}></b></p>
+                    </div>
+                </div>
+                <AccountCenter></AccountCenter>
                 <button style={{display:localStorage.uid?"block":"none"}} onClick={this.logout}>退出登录</button>
             </div>
         )
     }
-    // UNSAFE_componentWillMount() {
-    //     localStorage.uid = 506866023
-    // }
     componentDidMount() {
         if(localStorage.uid)
         this.props.getUserInfo.call(this)

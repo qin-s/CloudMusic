@@ -28,9 +28,9 @@ class MySongList extends React.Component{
                         <div className="my-info-tn">
                             <p>{this.state.songList.name}</p>
                             <div className="my-info-name">
-                                <p>
+                                <div className="img-info">
                                     <img src={this.state.userInfo.avatarUrl} alt=""/>
-                                </p>
+                                </div>
                                 <div className="my-name">
                                     {this.state.userInfo.nickname}
                                     <span className="iconfont icon-youjiantou"></span>
@@ -73,10 +73,15 @@ class MySongList extends React.Component{
                                     <span>{i+1}</span>
                                     <div className="song-info">
                                         <div className="song-name">
-                          <p>{v.name}</p>
+                                                <p>{v.name}</p>
                                                 <div className="song-creator">
                                                     <span>SQ</span>
-                                                    <b>周杰伦</b>
+                                                    {
+                                                        v.ar.map(index=>(
+                                                        <b key={index.id}>{index.name}&nbsp;&nbsp;&nbsp;</b>
+                                                        ))
+                                                    }
+                                                    
                                                 </div>
                                         </div>
                                         <div className="song-icon">

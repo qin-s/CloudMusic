@@ -46,7 +46,7 @@
     align-items: center;
     padding-top:20px;
 }
-.my-song-list-header .my-user-info .my-info-tn p img{
+.my-song-list-header .my-user-info .my-info-tn .img-info img{
     border-radius: 50%;
     height: 45px;
     width: 45px;
@@ -110,7 +110,7 @@
 .song-list .my-song-list ul li{
     display: flex;
     width: 100%;
-    color: rgb(156, 155, 150);
+    color: rgb(17, 17, 15);
     margin-bottom: 25px;
 }
 .song-list .my-song-list ul li>span{

@@ -32,7 +32,6 @@
 .cm_header_top{
     display:flex;
     justify-content: space-between;
-    /*margin:40px 20px 0px;*/
 }
 .cm_header_top b{
     font-size:60px;
@@ -40,7 +39,6 @@
 }
 .cm_header_middle{
     display:flex;
-    /*justify-content: space-between;*/
 }
 .cm_header_middle img{
     border-radius:50%;
@@ -53,6 +51,7 @@
     margin-top:50px;
     margin-left:10px;
     font-size:40px;
+    text-align: left;
 }
 .cm_header_middle_div_p{
     display:block;
@@ -79,7 +78,6 @@
 }
 .cm_header_middle_div_two b{
     font-size:40px;
-    /*line-height: 50px;*/
 }
 .cm_header_bottom{
     display:flex;
@@ -100,6 +98,7 @@
 .cm_header_member{
     display:flex;
     width: 660px;
+    text-align: left;
     margin:20px auto 0;
     border-radius:15px 15px 0 0 ;
     background-color: #2A2A2A;
@@ -107,7 +106,6 @@
 }
 .cm_header_member div{
     width: 300px;
-
     margin-left: 50px;
 }
 .cm_header_member_div{
@@ -120,4 +118,5 @@
 .cm_header_member p{
     color:#BDBDBD;
     font-size: 20px;
+    margin-top:10px;
 }

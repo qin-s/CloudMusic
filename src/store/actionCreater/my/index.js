@@ -30,7 +30,7 @@ export default  {
         return async (dispatch) => {
           const {data} = await this.$axios.get("/user/playlist",{
                 params:{
-                    uid:506866023
+                    uid:localStorage.id || ""
                 }
             })
             dispatch(upSongList(data.playlist))
