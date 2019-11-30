@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from "react-redux";
-import { Card, WingBlank, WhiteSpace } from 'antd-mobile';
+// import { Card, WingBlank, WhiteSpace } from 'antd-mobile';
 
 class VideoAll extends React.Component{
     constructor(){

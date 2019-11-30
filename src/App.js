@@ -11,6 +11,7 @@ import Index from "./views/Index";
 import VideoDetail from "./views/home/video/VideoDetail.js"
 import MySongList from "./views/home/my/MySongList"
 import RecentPlay from "./views/home/my/RecentPlay"
+import VideoRanking from "./views/home/video/VideoRanking"
 import LocalMusic from "./views/home/my/LocalMusic"
 import RadioStation from "./views/home/my/RadioStation"
 import MyCollect from "./views/home/my/MyCollect"
