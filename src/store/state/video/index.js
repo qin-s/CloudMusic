@@ -3,5 +3,11 @@ export default {
     recommendVideo:[],
     videoDetail: {},
     videoNew:[],
-    videoNetEase:[]
+    videoNetEase:[],
+    videoListenbgm:[],
+    videoScene:[],
+    videoAcgMusic:[],
+    videoCover:[],
+    videoDance:[],
+    videoGame:[]
 }

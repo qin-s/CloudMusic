@@ -1,0 +1,122 @@
+.video{
+    margin-bottom: 200px;
+}
+.videoEvery{
+    margin-bottom: 200px;
+}
+.videoListen-videoDetail{
+    position:relative
+}
+.videoListen-videoDetail .videoListen-playCount{
+    position: absolute;
+    top:10px;
+    left:10px;
+    font-size:10px;
+    color:#fff;
+}
+.videoListen-playCount .iconfont{
+    font-size:20px;
+}
+/* mv */
+.videoRecommend{
+    padding:20px;
+    position: relative;
+}
+.videoRecommend ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    position: relative;
+
+}
+ .videoRecommend-mvSelectH{
+    width:100%;
+    font-size:30px;
+    font-weight: bold;
+    margin-bottom:20px;
+}
+.videoRecommend-mvSelectH span{
+    display: block;
+    line-height:30px;
+    width:100px;
+    text-align:center;
+    border:1px solid #ccc;
+    border-radius: 15px;
+    float:right;
+    font-weight: normal;
+    font-size:20px
+}
+.videoRecommend ul li{
+    width:48%;
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+}
+.videoRecommend-playCount{
+    position:absolute;
+    color:#fff;
+    top:10px;
+    right:10px;
+    font-size:20px;
+}
+.videoRecommend ul li img{
+    height:200px;
+}
+
+
+/* videoMv */
+.videoMv .videoRanking{
+    position:relative;
+}
+.videoMv .videoRanking img{
+    position:absolute;
+    top:10px;
+    right:20px;
+}
+
+
+.videoRec-mvDetail{
+    position:relative;
+}
+.videoRec-mvDetail .videoRec-playCount{
+    position:absolute;
+    top:0;
+    left:10px;
+    color:#fff;
+    font-size:10px;
+}
+.videoRec-mvDetail .videoRec-duration{
+    position:absolute;
+    bottom:0;
+    right:10px;
+    color:#fff;
+    font-size:25px;
+}
+
+/* videoSquare */
+.videoSquare .videoSquare-pro{
+    border-bottom:5px solid #eee;
+    padding:0 10px ;
+}
+.videoSquare .videoSquare-pro-last{
+    border-bottom: 0;
+}
+.videoSquare .videoSquare-pro h3{
+    font-size:25px;
+    line-height:40px;
+    padding:15px 0;
+}
+.videoSquare-img{
+    width:100%;
+    margin-bottom:25px;
+}
+.videoSquare-img img{
+    width:100%;
+    padding-bottom:10px;
+    
+}
+.videoSquare-end{
+    text-align:center;
+    font-size:15px;
+    color:#aaa;
+}

@@ -1,25 +1,35 @@
 import React from "react"
 import {connect} from "react-redux";
+// import { Card, WingBlank, WhiteSpace } from 'antd-mobile';
 class VideoRecommend extends React.Component{
+    
     render(){
         return (
-            <div style={{
-                marginTop:"50px"
-            }}>
-
+            <div className={"videoRecommend"}>
+                <ul className={"videoRecommend-mvSelect"}>
+                <div className={"videoRecommend-mvSelectH"}>MV精选<span>更多MV</span></div>
                 {
-
                     this.props.recommendVideo.map(v=>(
-                        <div key={v.id}>
-                            <h3 >{v.name}</h3>
-                            <img style={{
-                                width:"300px",
-                                height:"200px"
-                            }} alt={""} onClick={()=>this.props.history.push("/videoDetail/"+v.id)} src={v.picUrl} />
-                        </div>
+                        <li key={v.id}>
+                            <p className={"videoRecommend-playCount"}>
+                                {
+                                    v.playCount>100000?(Math.floor(v.playCount/10000)+"万"):v.playCount
+                                }
+                            </p>
+                             <img  alt={""} 
+                             onClick={()=>this.props.history.push("/videoDetail/"+v.id)} src={v.picUrl} />
+                            <p>{v.name}</p>
+                    <p>
+                        {
+                            v.artists.map(x=>x.name+" ")
+                        }
+                    </p>
+                        </li>
                     ))
                 }
+            </ul>
             </div>
+            
         )
     }
     componentDidMount() {

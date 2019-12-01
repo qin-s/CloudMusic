@@ -1,0 +1,114 @@
+body,ul,ol,h1,h2,h3,h4,h5,input,p{
+	margin: 0;
+	padding: 0;
+}
+
+a{
+	text-decoration: none; 
+}
+li{
+	list-style: none; 
+}
+img{
+	border: 0;
+	vertical-align: top;  
+}
+.clearbox:after{
+	content: "";
+	display: block;
+	clear: both;
+	height: 0;
+	overflow: hidden;
+	visibility: hidden;
+}
+.clearbox{
+	zoom: 1;
+}
+.poster{
+    width:100%;
+    background:black;
+    padding-bottom:25px;
+}
+.poster .backques{
+    display:flex;
+
+    padding:40px 30px;
+    justify-content: space-between;
+}
+.poster .backques i{
+    font-size:50px;
+    color:#fff;
+}
+.daydate{
+    padding:0 30px;
+
+}
+.pushday{
+    text-align:center;
+    margin-top:15px;
+
+    display:flex;
+    justify-content: center;
+    color:#fff;
+    width:150px;
+    background:#fff;
+    color:black;
+    padding:10px 5px;
+    font-weight:bold;
+    font-size:25px;
+    border-radius: 40px;
+    align-items: center;
+    
+}
+.pushday i{
+    margin-left:5px;
+    font-size:30px;
+}
+
+.playallsongs div ul {
+    display:flex;
+    justify-content: space-between;
+    padding:20px 30px;
+    border-radius:10px 10px 0 0;
+    align-items: center;
+}
+.playallsongs div ul .allleft{
+    font-size:30px;
+}
+.playallsongs div ul .allleft i{
+    font-size:40px;
+}
+.playdaysongs ul li{
+    margin-top:30px;
+    display:flex;
+}
+.playdaysongs ul{
+    padding:0 30px;
+}
+.playdaysongs ul li div:nth-child(1){
+    height:80px;
+}
+.playdaysongs ul li div:nth-child(1) img{
+    width:80px;
+    height:80px;
+    border-radius:10px;
+}
+.playdaysongs ul li div:nth-child(2){
+    width:50px;
+    height:80px;
+
+    flex:1;
+}
+.playdaysongs ul li div:nth-child(3){
+    width:50px;
+    height:80px;
+    padding-right:30px;
+}
+.playdaysongs ul li div:nth-child(3) i{
+    font-size:40px;
+}
+.playdaysongs ul li div:nth-child(3) i:nth-child(1){
+    color:red;
+    margin-left:-20px;
+    margin-right:20px;
+}

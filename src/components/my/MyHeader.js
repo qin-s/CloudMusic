@@ -4,7 +4,7 @@ class MyHeader extends React.Component{
         return (
             <div className={"my-header"}>
                 <span className={"iconfont icon-cloud"}></span>
-                <p>我的音乐</p>
+                <p style={{fontSize:"20px"}}>我的音乐</p>
                 <span className={"iconfont icon-iconfontplay"}></span>
             </div>
         )
