@@ -107,7 +107,7 @@ class MySongList extends React.Component{
             this.setState({
                 songList:data.playlist
             })
-            console.log(1111122222,this.state.songList.tracks)
+            // console.log(1111122222,this.state.songList.tracks)
         })
         //获取用户信息
         this.$axios.get("/user/detail",{

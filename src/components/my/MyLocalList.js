@@ -1,11 +1,5 @@
 import React from "react"
 class MyLocalList extends React.Component{
-    constructor(){
-        super();
-        this.state = {
-            userRecordList:[]
-        }
-    }
     render(){
         return (
             <div className="my-list">
@@ -20,22 +14,24 @@ class MyLocalList extends React.Component{
                         </div>
                     </div>
                 </li>
-                <li  onClick={()=>this.props.history.push({pathname:"/record",state:{userRecordList:this.state.userRecordList}})}>
+                <li  onClick={()=>{
+                    this.props.history.push({pathname:"/record",state:{userRecordList:this.props.userRecordList}})}
+                    }>
                     <span className="iconfont icon-zuijinbofang"></span>
                     <div className="local-music">
                         <p>最近播放</p>
                         <div className="list-icon-right">
-                            <i>{this.state.userRecordList.length}</i>
+                            <i>{this.props.userRecordList.length}</i>
                             <b className="iconfont icon-right-arrow"></b>
                         </div>
                     </div>
                 </li>
                 <li>
                     <span className="iconfont icon-wodediantai"></span>
-                    <div className="local-music" onClick={()=>this.props.history.push("/radiostation")}>
+                    <div className="local-music" onClick={()=>this.props.history.push({pathname:'/radiostation',state:{myRadioInfo:this.props.myRadioInfo}})}>
                         <p>我的电台</p>
                         <div className="list-icon-right">
-                            <i>0</i>
+                            <i>{this.props.myRadioInfo.length}</i>
                             <b className="iconfont icon-right-arrow"></b>
                         </div>
                     </div>
@@ -54,19 +50,8 @@ class MyLocalList extends React.Component{
         </div>
         )
     }
-    componentDidMount(){
-        this.$axios.get("/user/record",{
-            params:{
-                uid:506866023,
-                type:1
-            }
-       }).then(({data})=>{
-           this.setState({
-               userRecordList:data.weekData
-           })
-          console.log(data.weekData);
-       });
-       
+    componentWillMount(){
+        // console.log(111111,this.props.myRadioInfo)
     }
 }
 export default MyLocalList

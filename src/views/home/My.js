@@ -52,6 +52,7 @@ class My extends React.Component{
         )
     }
     componentDidMount(){
+        // console.log(22222222222,this.props.myRadioInfo.count)
         new Swiper('.swiper-container', {
             slidesPerView: 5,
             spaceBetween: 20,
@@ -61,17 +62,27 @@ class My extends React.Component{
             },
           });
         this.props.getSongList.call(this);
+        this.props.getMyRadioInfo.call(this);
+        this.props.getUserRecordList.call(this);
     }
 }
 function mapStateToProps(state){
     return {
-        songList:state.my.songList
+        songList:state.my.songList,
+        myRadioInfo:state.my.myRadioInfo,
+        userRecordList:state.my.userRecordList
     }
 }
 function mapDispatchToProps(dispatch){
     return {
         getSongList(){
             dispatch(myActionCreator.getSongList.call(this))
+        },
+        getMyRadioInfo(){
+            dispatch(myActionCreator.getMyRadioInfo.call(this))
+        },
+        getUserRecordList(){
+            dispatch(myActionCreator.getUserRecordList.call(this))
         }
     }
 }
