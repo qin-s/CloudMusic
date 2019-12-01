@@ -40,10 +40,10 @@ export default  {
     //获取创建的歌单列表
     getSongList(){
         return async (dispatch) => {
-            if(localStorage.id){
+            if(localStorage.uid){
                 const {data} = await this.$axios.get("/user/playlist",{
                 params:{
-                        uid:localStorage.id || ""
+                        uid:localStorage.uid || ""
                     }
                 })
                 // console.log("getSongList",data)
@@ -55,7 +55,7 @@ export default  {
     //获取收藏的专辑
     getCollectAlbum(){
         return async (dispatch) => {
-            if(localStorage.id){
+            if(localStorage.uid){
                  const {data} = await this.$axios.get("/album/sublist",{
                     params:{
                         limit:25
@@ -70,7 +70,7 @@ export default  {
     //获取收藏的歌手
     getCollectSinger(){
         return async (dispatch) => {
-            if(localStorage.id){
+            if(localStorage.uid){
                  const {data} = await this.$axios.get("/artist/sublist");
             // console.log(data);
                 dispatch(upCollectSinger(data))
@@ -81,7 +81,7 @@ export default  {
     //收藏的MV视频;
     getCollectMV(){
         return async (dispatch) => {
-            if(localStorage.id){
+            if(localStorage.uid){
                   const {data} = await this.$axios.get("/mv/sublist");
                 console.log(data);
                 dispatch(upCollectMV(data))
@@ -92,7 +92,7 @@ export default  {
     //我的电台;
     getMyRadioInfo(){
         return async (dispatch) => {
-            if(localStorage.id){
+            if(localStorage.uid){
                 const {data} = await this.$axios.get("/dj/sublist");
                 // console.log("我的电台",data.djRadios)
                 dispatch(upMyRadioInfo(data.djRadios))
@@ -102,10 +102,10 @@ export default  {
     //最近播放歌曲
     getUserRecordList(){
         return async (dispatch) => {
-            if(localStorage.id){
+            if(localStorage.uid){
                 const {data} = await this.$axios.get("/user/record",{
                     params:{
-                        uid:localStorage.id,
+                        uid:localStorage.uid,
                         type:0
                     }
                 });
