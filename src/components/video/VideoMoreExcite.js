@@ -33,8 +33,8 @@ class VideoMoreExcite extends React.Component{
                                         borderRadius:"16px"
                                     }}
                                     thumb={
-                                        v.data.artists.map(x=>(
-                                            <img key={""} src={x.img1v1Url} alt="" style={{width:"32px",
+                                        v.data.artists.map((x,i)=>(
+                                            <img key={"i"} src={x.img1v1Url} alt="" style={{width:"32px",
                                             height:"32px",
                                             borderRadius:"16px"}} />
                                         ))

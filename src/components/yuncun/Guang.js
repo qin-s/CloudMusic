@@ -31,9 +31,9 @@ export default class Guang extends React.Component{
                         <span>晚安</span>
                         </i></div>
                 </div>
-                <div className="t-hotwall">
+                <div className="t-hotwall" onClick={()=>this.props.history.push("/hotwall")} >
                     <div>
-                    <p className="t-yun">云村热评墙></p>
+                    <p className="t-yun" >云村热评墙></p>
                     <p className="t-hi">Hi,哈哈哈哈，快来围观吧~</p>
                     </div>
                     <div className="t-date">
@@ -50,11 +50,17 @@ export default class Guang extends React.Component{
                         <Fragment key={v.id}>
                             <div className="t-one1">
                             <img  src={v.cover} alt=""/>
-                            <h3>{v.briefDesc}</h3>
-                            <div>
-                                <img src="" alt=""/>
-                                <span>{v.name}</span>
+                            <p>{v.name}</p>
+                            <div className="t-img">
+                                {/* <img src="" alt=""/> */}
+                     <p>{v.artistName}:</p>
+                     <br/>
+                          
+                     <p>
+                     <i className="iconfont icon-diancai1-copy"></i>
+                         {v.playCount}</p>
                                 <i className={"iconfont icon-sandian"}></i>
+
                             </div>
                     </div>
                   
@@ -67,8 +73,11 @@ export default class Guang extends React.Component{
             </div>
         )
     }
+   
+    
 // 10887873
     componentDidMount(){
+        console.log(this.props)
         this.$axios.get("/mv/all",{
             params:{
                 area:"港台"
@@ -80,5 +89,6 @@ export default class Guang extends React.Component{
                 data:data.data
             })
         })  
+
     }
 }

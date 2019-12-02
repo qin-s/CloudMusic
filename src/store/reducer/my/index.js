@@ -22,5 +22,15 @@ export default function (state=myStateInit,{type,payload}){
             state.collectMV = payload.collectMV
         }
     }
+    if(type === myActionType.myRadioInfo){
+        if(payload.myRadioInfo){
+            state.myRadioInfo = payload.myRadioInfo
+        }
+    }
+    if(type === myActionType.userRecordList){
+        if(payload.userRecordList){
+            state.userRecordList = payload.userRecordList
+        }
+    }
     return state
 }

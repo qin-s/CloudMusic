@@ -65,3 +65,6 @@
     display: flex;
     justify-content: space-between;
 }
+.t-zhuan i{
+    font-size:30px;
+}

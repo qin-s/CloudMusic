@@ -5,15 +5,9 @@ import MySongRecord from "../../../components/my/myRecord/MySongRecord"
 import MyLivingList from "../../../components/my/myRecord/MyLivingList"
 import MyVideoList from "../../../components/my/myRecord/MyVideoList";
 class RecentPlay extends React.Component{
-    constructor(){
-        super();
-        this.state = {
-            userRecordList:[]
-        }
-    }
     render(){
         const tabs = [
-                  { title: '歌曲' },
+                  { title: '歌曲'+this.props.location.state.userRecordList.length},
                   { title: '直播' },
                   { title: '视频' },
                 ];
@@ -50,16 +44,7 @@ class RecentPlay extends React.Component{
         )
     }
     componentDidMount(){
-        // this.getSongRecordList();
-        // console.log(this.props.location.state.userRecordList)
-        // this.$axios.get("/user/record",{
-        //     params:{
-        //         uid:506866023,
-        //         type:1
-        //     }
-        // }).then(({data})=>{
-        //     console.log("用户播放列表",data);
-        // })
+        // console.log(this.props)
     }
 }
 export default RecentPlay
