@@ -9,8 +9,8 @@ class VideoRecommend extends React.Component{
                 <ul className={"videoRecommend-mvSelect"}>
                 <div className={"videoRecommend-mvSelectH"}>MV精选<span>更多MV</span></div>
                 {
-                    this.props.recommendVideo.map(v=>(
-                        <li key={v.id}>
+                    this.props.recommendVideo.map((v,i)=>(
+                        <li key={i}>
                             <p className={"videoRecommend-playCount"}>
                                 {
                                     v.playCount>100000?(Math.floor(v.playCount/10000)+"万"):v.playCount
@@ -18,7 +18,7 @@ class VideoRecommend extends React.Component{
                             </p>
                              <img  alt={""} 
                              onClick={()=>this.props.history.push("/videoDetail/"+v.id)} src={v.picUrl} />
-                            <p>{v.name}</p>
+                            <p className="videoRecommend-detail">{v.name}</p>
                     <p>
                         {
                             v.artists.map(x=>x.name+" ")

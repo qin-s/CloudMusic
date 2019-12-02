@@ -7,7 +7,10 @@ export default (state=initState,{type,payload})=>{
     if(type === "UP_RECOMMEND_LIST"){
         state.recommendVideo = payload.recommendVideo
     }
-    if(type === "GET_VIDEO_DETAIL"){
+    if(type === "GET_VIDEO_URL"){
+        state.videoUrl = payload.videoUrl
+    }
+    if(type === "UP_VIDEO_DETAIL"){
         state.videoDetail = payload.videoDetail
     }
     if(type === "UP_NEW_LIST"){
@@ -33,6 +36,16 @@ export default (state=initState,{type,payload})=>{
     }
     if(type === 'UP_GAME_LIST'){
         state.videoGame = payload.videoGame
+    }
+    if(type === "UP_MOREEXCITE_LIST"){
+        state.moreExciteMv = payload.moreExciteMv
+    }
+    if(type === "UP_RELEVANT_VIDEO_LIST"){
+        state.relevantVideo = payload.relevantVideo
+    }
+    if(type === "UP_DETAIL_COMMENTS_LIST"){
+        state.detailHotComment = payload.detailHotComment
+        state.detailAllComent = payload.detailAllComent
     }
     return state
 }

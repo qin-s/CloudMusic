@@ -15,14 +15,18 @@ class VideoSquare extends React.Component{
                 <div className={"videoSquare-pro"}>
                     <h3>达人计划</h3>
                     <div className={"videoSquare-img"}>
-                        <img src={daren} alt={""}/>
+                        <img src={daren} onClick={
+                            ()=>this.props.history.push("/squareDaren")
+                        } alt={""}/>
                         <span>成为视频达人，享受多重福利</span>
                     </div>
                 </div>    
                 <div className={"videoSquare-pro"}>
                     <h3>有奖活动</h3>
                     <div className={"videoSquare-img"}>
-                        <img src={active1} alt={""}/>
+                        <img onClick={
+                            ()=>this.props.history.push("/squareCloud")
+                        } src={active1} alt={""}/>
                         <span>来听我的，领视频酱的福利了</span>
                     </div>
                     <div className={"videoSquare-img"}>
