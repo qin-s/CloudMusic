@@ -10,7 +10,6 @@ class VideoEvery extends React.Component{
     }
     async componentDidMount() {
         const {data} = await this.$axios.get("/video/group/list")
-        console.log(data)
     }
 }
 function mapStateToProps(){

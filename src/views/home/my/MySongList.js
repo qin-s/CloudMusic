@@ -4,7 +4,8 @@ class MySongList extends React.Component{
     constructor(){
         super();
         this.state = {
-            songList:{}
+            songList:{},
+            userInfo:{}
         }
     }
     render(){
@@ -27,11 +28,11 @@ class MySongList extends React.Component{
                         <div className="my-info-tn">
                             <p>{this.state.songList.name}</p>
                             <div className="my-info-name">
-                                <p>
-                                    <img src="http://p1.music.126.net/VnZiScyynLG7atLIZ2YPkw==/18686200114669622.jpg?param=200y200" alt=""/>
-                                </p>
+                                <div className="img-info">
+                                    <img src={this.state.userInfo.avatarUrl} alt=""/>
+                                </div>
                                 <div className="my-name">
-                                    文字文字
+                                    {this.state.userInfo.nickname}
                                     <span className="iconfont icon-youjiantou"></span>
                                 </div>
                             </div>
@@ -72,10 +73,15 @@ class MySongList extends React.Component{
                                     <span>{i+1}</span>
                                     <div className="song-info">
                                         <div className="song-name">
-                          <p>{v.name}</p>
+                                                <p>{v.name}</p>
                                                 <div className="song-creator">
                                                     <span>SQ</span>
-                                                    <b>周杰伦</b>
+                                                    {
+                                                        v.ar.map(index=>(
+                                                        <b key={index.id}>{index.name}&nbsp;&nbsp;&nbsp;</b>
+                                                        ))
+                                                    }
+                                                    
                                                 </div>
                                         </div>
                                         <div className="song-icon">
@@ -101,7 +107,18 @@ class MySongList extends React.Component{
             this.setState({
                 songList:data.playlist
             })
-            console.log(1111122222,this.state.songList.tracks)
+            // console.log(1111122222,this.state.songList.tracks)
+        })
+        //获取用户信息
+        this.$axios.get("/user/detail",{
+            params:{
+                uid:506866023
+            }
+        }).then(({data})=>{
+            console.log("用户信息",data.profile)
+            this.setState({
+                userInfo:data.profile
+            })
         })
     }
 }

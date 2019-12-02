@@ -1,30 +1,3 @@
-body,ul,ol,h1,h2,h3,h4,h5,input,p{
-	margin: 0;
-	padding: 0;
-}
-
-a{
-	text-decoration: none; 
-}
-li{
-	list-style: none; 
-}
-img{
-	border: 0;
-	vertical-align: top;  
-}
-.clearbox:after{
-	content: "";
-	display: block;
-	clear: both;
-	height: 0;
-	overflow: hidden;
-	visibility: hidden;
-}
-.clearbox{
-	zoom: 1;
-}
-
 .swiper-container{
     /* --swiper-theme-color: #ff6600; */
     --swiper-pagination-color: red;/* 两种都可以 */
@@ -168,9 +141,11 @@ aside{
 
 .esscloud{
     margin-top:80px;
+    text-align:center;
 }
 .esscloud .essdiv{
-    border:8px solid #ccc;
+    height:8px;
+    background:#ccc;
     opacity: 0.8;
     margin-bottom:30px;
 }
@@ -188,8 +163,8 @@ aside{
     margin:30px 0;
 }
 .cloudpic img{
-    width:410px;
-    height:300px;
+    width:610px;
+    height:500px;
 }
 .cloudpic{
     margin-left:30px;
@@ -201,8 +176,11 @@ aside{
     margin:20px 0;
 }
 .cloudmsg{
-    width:600px;
+    width:610px;
+    margin:0 auto;
+    text-align:left;
     word-break:break-all;
+    margin-bottom:10px;
 }
 .goodshare{
     margin-top:20px;
