@@ -20,7 +20,7 @@ export default class Yuncun extends React.Component {
         <Tabs tabs={tabs}  renderTabBar={props => <Tabs.DefaultTabBar {...props} page={3} />}>
           
         
-          <Guang></Guang>
+          <Guang {...this.props}></Guang>
           <Allmv></Allmv>        
         </Tabs>
         <WhiteSpace />

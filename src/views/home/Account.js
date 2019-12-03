@@ -1,10 +1,10 @@
-
 import "../../assets/css/account/account.css";
 import React from "react";
 import {bindActionCreators} from "redux";
 import {connect} from "react-redux";
-import AccountCenter from "../../components/account/AccountCenter"
 import accountCreator from "../../store/actionCreater/account";
+import AccountCenter from "../../components/account/AccountCenter";
+import AccountBottom from "../../components/account/AccountBottom";
 class Account extends React.Component {
     render() {
         let userInfo = this.props.userInfo;
@@ -58,6 +58,7 @@ class Account extends React.Component {
                     </div>
                 </div>
                 <AccountCenter></AccountCenter>
+                <AccountBottom></AccountBottom>
                 <button style={{display:localStorage.uid?"block":"none"}} onClick={this.logout}>退出登录</button>
             </div>
         )

@@ -17,7 +17,16 @@ class MyCollectSinger extends React.Component{
                         <span className="iconfont icon-caidan-dian" style={{fontSize:"22px"}}></span>
                     </div>
                 </div>
-                )):<div className="none-record">暂无收藏</div>
+                )):<div className="none-record" style={{
+                    display:"flex",
+                    justifyContent:"center",
+                    alignItems:"center",
+                    width:"100%",
+                    height:"230px",
+                    color:"chocolate",
+                    fontSize:"14px"
+
+                }}>暂无收藏</div>
             }
             </>
             

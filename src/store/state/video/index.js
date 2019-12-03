@@ -1,10 +1,19 @@
 export default {
     vids:[],
     recommendVideo:[],
-    videoDetail: {},
+    videoUrl: {},
+    videoDetail:[],
+    videoDetail:[],
     videoNew:[],
     videoNetEase:[],
     videoListenbgm:[],
     videoScene:[],
-    videoAcgMusic:[]
+    videoAcgMusic:[],
+    videoCover:[],
+    videoDance:[],
+    videoGame:[],
+    moreExciteMv:[],
+    relevantVideo:[],
+    detailHotComment:[],
+    detailAllComent:[]
 }
