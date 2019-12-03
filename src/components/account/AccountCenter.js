@@ -1,12 +1,19 @@
 import React,{Fragment} from "react";
+import {bindActionCreators} from "redux";
+import {connect} from "react-redux";
+import accountCreator from "../../store/actionCreater/account";
 import "../../assets/css/account/accountCenter.css";
-export default class AccountCenter extends React.Component{
+class AccountCenter extends React.Component{
     render(){
+        let userNewsInfo = this.props.userNewsInfo;
         return (
             <Fragment>
                 <div className={"cm_account_center_fragment"}>
                     <div>
-                        <i className="iconfont icon-xiaoxixinfengnews"></i>
+                        <div className={"cm_account_center_div_news"}>
+                            <i className="iconfont icon-xiaoxixinfengnews"></i>
+        <div style={{display:userNewsInfo.newMsgCount?"block":"none"}}>{userNewsInfo.newMsgCount}</div>
+                        </div>
                         <p>消息</p>
                     </div>
                     <div>
@@ -25,4 +32,9 @@ export default class AccountCenter extends React.Component{
             </Fragment>    
         )
     }
+    componentDidMount() {
+        if(localStorage.uid)
+        this.props.getUserNewsInfo.call(this)
+    }
 }
+export default connect(state=>({userNewsInfo:state.account.userNewsInfo}),dispatch=>bindActionCreators(accountCreator,dispatch))(AccountCenter);
