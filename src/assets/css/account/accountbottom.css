@@ -1,0 +1,32 @@
+.cm_account_bottom .cm_account_bottom_border_top{
+    margin-top:12px;
+    background-color: #FFFFFF;
+}
+.cm_account_bottom .cm_account_bottom_border_bottom{
+    margin-bottom:12px;
+}
+.cm_account_bottom div div{
+    display:flex;
+    height:80px;
+    line-height: 80px;
+}
+.cm_account_bottom div i{
+    font-size: 40px;
+    padding:0 20px;
+    width:40px;
+    color:#343434;
+}
+.cm_account_bottom div p{
+    font-size: 35px;
+    width:710px;
+    color:#323234;
+    border-bottom:2px solid #F2F2F2;
+}
+.cm_account_bottom div b{
+    color:#D3D3D3;
+    float:right;
+    font-size: 40px;
+}
+.cm_account_bottom .cm_account_bottom_p1{
+    border:none;
+}

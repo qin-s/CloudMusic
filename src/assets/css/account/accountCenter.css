@@ -21,3 +21,18 @@
     margin-top:20px;
     font-size: 30px;
 }
+.cm_account_center_fragment .cm_account_center_div_news{
+    text-align: center;
+    width: 100%;
+    position: relative;
+}
+.cm_account_center_fragment .cm_account_center_div_news div{
+    position: absolute;
+    height: 30px;
+    border-radius:15px;
+    color:#FFFFFF;
+    line-height: 30px;
+    background-color: #FE3B3B;
+    top:0;
+    right:38px;
+}
