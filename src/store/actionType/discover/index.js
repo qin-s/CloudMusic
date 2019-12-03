@@ -3,5 +3,7 @@ export default {
     rdSongs:"GET_SONGS",
     newdish:"GET_NEW_DISH",
     esscloud:"GET_ESS_CLOUD",
-    daysongs:"DAY_SONGS"
+    daysongs:"DAY_SONGS",
+    getsongsheet:"SONG_SHEET",
+    pushsheet:"PUSH_SHEET"
 }

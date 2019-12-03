@@ -3,5 +3,13 @@ export default {
     rdSongs:[],
     newdish:[],
     esscloud:[],
-    daysongs:[]
+    daysongs:[],
+    songsheet:[
+        '推荐' ,
+        '官方' ,
+        '精品' ,
+        '华语' 
+    ],
+    changesongsheet:[],
+    pushsheet:[]
 }

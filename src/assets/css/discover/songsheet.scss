@@ -1,0 +1,29 @@
+.songsquare{
+    display:flex;
+    p{
+        font-size:50px;
+        margin-left:30px;
+        font-weight:400
+    }
+    i{
+        font-size:50px;
+        margin-left:30px;
+    }
+}
+.squaretitle{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    li{
+        position: relative;
+        margin-top:20px;
+        width:250px;
+        padding:0 25px;
+        .squareright{
+            position: absolute;
+            right:30px;
+            color:white;
+            top:0;
+        }
+    }
+}

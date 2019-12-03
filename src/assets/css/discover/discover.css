@@ -38,6 +38,7 @@
 }
 .left,.right{
     font-size:60px;
+    padding:0 20px;
 }
 .song{
     color:red;
@@ -73,7 +74,7 @@ aside{
     text-align:center;
 }
 .day ul li i{
-    font-size:86px;
+    font-size:66px;
     border-radius: 48px;
     background:red;
     color:#fff;
