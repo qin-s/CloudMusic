@@ -1,0 +1,45 @@
+*{
+    padding:0;
+    margin:0
+}
+.t-hotp{
+    display: flex;
+    justify-content: space-between;
+    font-size:40px;
+    padding:10px;
+    margin:50px auto;
+}
+.t-box{
+    margin-top:40px;
+    width:250px;
+    height:90px;
+    border:1px solid #ccc;
+    background: #ccc;
+    border-radius:50px;
+
+}
+.t-imag{
+    width:90px;
+    border-radius:50px;
+}
+.t-box a{
+    font-size:35px;
+    color:#fff;
+    line-height: 100px;
+}
+.t-wen2{
+    width:650px;
+    margin:0 auto;
+}
+.t-yinh{
+    font-size:100px;
+    color:rgb(24, 22, 22);
+}
+.t-hua{
+    font-size:50px;
+    color:rgb(27, 25, 25);
+}
+.t-ge{
+    font-size:25px;
+    
+}

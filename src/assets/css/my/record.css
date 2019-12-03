@@ -163,15 +163,28 @@
 /* 我的电台 */
 .radio-station{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    font-size: 32px;
+    font-size: 28px;
+    padding:  20px 25px 15px;
     width: 100%;
-    height: 1000px;
-    /* position: relative;
-    position: absolute; */
-    color: rgb(224, 144, 24);
-    background: rgb(250, 249, 248);
+    box-sizing: border-box;
+    border-bottom: 15px solid #f1efef;
+}
+.radio-station .icon-maikefeng-xian{
+    font-size: 60px;
+    color: rgb(243, 16, 35);
+}
+.radio-station .radio-apply{
+    display: flex;
+    width: 100%;
+    flex-grow: 1;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 25px;
+}
+.radio-station .radio-apply .icon-right-arrow{
+    font-size: 26px;
 }
 
 /* 播放量 */

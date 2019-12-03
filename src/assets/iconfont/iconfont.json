@@ -125,6 +125,13 @@
       "unicode_decimal": 59046
     },
     {
+      "icon_id": "2012257",
+      "name": "coment",
+      "font_class": "coment",
+      "unicode": "e610",
+      "unicode_decimal": 58896
+    },
+    {
       "icon_id": "2533204",
       "name": "我的收藏",
       "font_class": "wodeshoucang",
@@ -167,6 +174,13 @@
       "unicode_decimal": 58910
     },
     {
+      "icon_id": "4297803",
+      "name": "赞",
+      "font_class": "zan",
+      "unicode": "e63a",
+      "unicode_decimal": 58938
+    },
+    {
       "icon_id": "4608882",
       "name": "下载",
       "font_class": "xiazai1",
@@ -195,6 +209,13 @@
       "unicode_decimal": 58925
     },
     {
+      "icon_id": "5311294",
+      "name": "文件夹",
+      "font_class": "wenjianjia",
+      "unicode": "e60f",
+      "unicode_decimal": 58895
+    },
+    {
       "icon_id": "5342641",
       "name": "网易云音乐",
       "font_class": "wangyiyunyinle1",
@@ -214,6 +235,13 @@
       "font_class": "weibiaoti--",
       "unicode": "e61d",
       "unicode_decimal": 58909
+    },
+    {
+      "icon_id": "6401058",
+      "name": "书写",
+      "font_class": "weibiaoti--1",
+      "unicode": "e622",
+      "unicode_decimal": 58914
     },
     {
       "icon_id": "7629048",
@@ -251,11 +279,25 @@
       "unicode_decimal": 58894
     },
     {
+      "icon_id": "8499160",
+      "name": "转发",
+      "font_class": "zhuanfa",
+      "unicode": "e611",
+      "unicode_decimal": 58897
+    },
+    {
       "icon_id": "8807360",
       "name": "收 藏",
       "font_class": "collect",
       "unicode": "e600",
       "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "9402952",
+      "name": "金币",
+      "font_class": "changyongicon-",
+      "unicode": "e616",
+      "unicode_decimal": 58902
     },
     {
       "icon_id": "9512523",
@@ -298,6 +340,13 @@
       "font_class": "juxing",
       "unicode": "e606",
       "unicode_decimal": 58886
+    },
+    {
+      "icon_id": "10408926",
+      "name": "麦克风",
+      "font_class": "maikefeng-xian",
+      "unicode": "e643",
+      "unicode_decimal": 58947
     },
     {
       "icon_id": "10464645",

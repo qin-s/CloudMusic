@@ -4,7 +4,7 @@ import { Card, WingBlank, WhiteSpace } from 'antd-mobile';
 class VideoAcgMusic extends React.Component{
     render(){
         return (
-                <div className={"videoScene"}>
+                <div className={"videoScene video"}>
                 {                    
                     this.props.videoAcgMusic.map((v,i)=>(
                         v.data.creator?<div key={i}>
