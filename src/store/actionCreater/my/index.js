@@ -1,4 +1,10 @@
 import myActionType from "../../actionType/my"
+export const upUserCouldList = userCouldList => ({
+    type:myActionType.userCouldList,
+    payload:{
+        userCouldList
+    }
+})
 export const upUserRecordList = userRecordList => ({
     type:myActionType.userRecordList,
     payload:{
@@ -113,5 +119,23 @@ export default  {
                 dispatch(upUserRecordList(data.allData))
             }
         }
-    }
+    },
+    //获取云盘数据
+   getUserCouldList(){
+       console.log(111111111111)
+       return async (dispatch) => {
+           if(localStorage.uid){
+               const {data} = await this.$axios.get("/user/cloud",{
+                   params:{
+                       limit:20,
+                       uid:localStorage.uid
+                   }
+               });
+               console.log("云盘数据:",data)
+               dispatch(upUserCouldList(data.data))
+           }
+       }
+   }
+
+    
 }

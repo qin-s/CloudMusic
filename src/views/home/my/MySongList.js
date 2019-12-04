@@ -98,7 +98,7 @@ class MySongList extends React.Component{
         )
     }
     componentDidMount(){
-        console.log(this.props.location.state.id)
+        // console.log("歌曲列表：",this.state.songList)
         this.$axios.get("/playlist/detail",{
             params:{
                 id:this.props.location.state.id
@@ -107,19 +107,28 @@ class MySongList extends React.Component{
             this.setState({
                 songList:data.playlist
             })
-            // console.log(1111122222,this.state.songList.tracks)
+            console.log(1111122222,this.state.songList)
         })
         //获取用户信息
         this.$axios.get("/user/detail",{
             params:{
-                uid:506866023
+                uid:localStorage.uid
             }
         }).then(({data})=>{
-            console.log("用户信息",data.profile)
+            // console.log("用户信息",data.profile)
             this.setState({
                 userInfo:data.profile
             })
         })
+        //获取歌曲详情
+        this.$axios.get("/song/detail",{
+            params:{
+                ids:536096151
+            }
+        }).then(({data})=>{
+            console.log("歌曲详情",data)
+        })
     }
+    
 }
 export default MySongList
