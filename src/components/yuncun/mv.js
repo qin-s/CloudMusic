@@ -57,10 +57,13 @@ export default class Allmv extends React.Component {
                             </div>
                             
                             <div className="t-zhuan">
-                                    <p>{v.info.shareCount}</p>
-                                    <p>{v.info.commentCount}</p>
-                                    <p>{v.info.likedCount}</p>
-                                    <p>{}</p>
+                                    <p><i className="iconfont icon-zhuanfa"></i>
+                                        {v.info.shareCount}</p>
+                                    <p><i className="iconfont icon-coment"></i>
+                                        {v.info.commentCount}</p>
+                                    <p><i className="iconfont icon-diancai1-copy"></i>
+                                        {v.info.likedCount}</p>
+                                    <p><i className="iconfont icon-caidan-dian"></i></p>
                             </div>
                             <hr/>
 

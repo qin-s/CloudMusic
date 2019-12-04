@@ -4,7 +4,7 @@ import { Card, WingBlank, WhiteSpace } from 'antd-mobile';
 class VideoScene extends React.Component{
     render(){
         return (
-                <div className={"videoScene"}>
+                <div className={"videoScene video"}>
                 {                    
                     this.props.videoScene.map((v,i)=>(
                         v.data.creator?<div key={i}>
@@ -64,7 +64,7 @@ function mapDispatchToProps(dispatch){
             dispatch(async ()=>{
                 const {data} = await this.$axios.get("/video/group",{
                     params:{
-                        id:58100
+                        id:58101
                     }
                 })
                 dispatch({

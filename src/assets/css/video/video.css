@@ -27,7 +27,6 @@
     flex-wrap: wrap;
     justify-content: space-around;
     position: relative;
-
 }
  .videoRecommend-mvSelectH{
     width:100%;
@@ -62,7 +61,12 @@
 .videoRecommend ul li img{
     height:200px;
 }
-
+.videoRecommend-detail{
+overflow: hidden;  
+display: -webkit-box;  
+-webkit-line-clamp: 2;  
+-webkit-box-orient: vertical;  
+}
 
 /* videoMv */
 .videoMv .videoRanking{
@@ -119,4 +123,79 @@
     text-align:center;
     font-size:15px;
     color:#aaa;
+}
+
+/* videoDetail */
+.videoDetail-content{
+    padding:0 10px 10px;
+    border-bottom:1px solid #ddd;
+}
+.videoDetail-head{
+    position: relative;
+    padding:20px 0;
+}
+.videoDetail-head h3{
+    font-size:30px;
+    font-weight: bold;
+}
+.videoDetail-head span{
+    position: absolute;
+    top:20px;
+    right:20px;
+    font-size:30px;
+}
+.videoDetail-playCount{
+    font-size:15px;
+    color:#ccc;
+    margin-bottom:20px;
+}
+.videoDetail-opration{
+    display: flex;
+    justify-content: space-around;
+}
+.videoDetail-opration li{
+    width:25%;
+    text-align: center;
+}
+.videoDetail-opration li i{
+    display: block;
+    font-size:40px;
+    color:#666;
+    font-weight: 200;
+}
+.videoDetail-artist {
+    border-bottom: 10px solid #ccc;
+}
+.videoDetail-relevant{
+    border-bottom:10px solid #ccc;
+
+}
+.videoDetail-video{
+    display: flex;
+    padding: 10px
+}
+.videoDetail-video .videoDetail-videoLeft{
+    width:30%;
+    position:relative;
+}
+.videoDetail-video .videoDetail-videoLeft span{
+    position: absolute;
+    right:10px;
+    top:10px;
+    color:#fff;
+}
+.videoDetail-video .videoDetail-videoLeft img{
+    border-radius: 20px;
+    width:100%;
+}
+.videoDetail-video .videoDetail-videoRight{
+    width:70%;
+    padding-left:10px;
+    padding-top:20px;
+}
+.videoDetail-video .videoDetail-videoRight p{
+    padding-bottom:10px;
+}
+.videoDetail-video .videoDetail-videoRight p i{
+    font-style: none;
 }

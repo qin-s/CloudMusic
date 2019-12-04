@@ -2,7 +2,7 @@ import React from "react"
 class VideoRanking extends React.Component{
     render(){
         return (
-            <div>11111111</div>
+            <div>2222222222</div>
         )
     }
 }

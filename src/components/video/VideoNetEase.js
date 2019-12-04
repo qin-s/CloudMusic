@@ -7,8 +7,8 @@ class VideoNetEase extends React.Component{
         return (
             <div style={{marginBottom:"150px"}}>
                 {
-                    this.props.videoNetEase.map(v=>(
-                        <div key={v.id}>
+                    this.props.videoNetEase.map((v,i)=>(
+                        <div key={i}>
                             <WingBlank size="lg">
                                 <WhiteSpace size="lg" />
                                 <Card>

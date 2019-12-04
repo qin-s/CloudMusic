@@ -41,9 +41,11 @@ class Video extends React.Component{
                       tabs={this.state.arr} renderTabBar={props => <Tabs.DefaultTabBar {...props} page={3} />}>
                           <VideoListenBGM {...this.props}></VideoListenBGM>
                           <VideoScene {...this.props}></VideoScene>
-                            <div style={{width:"100%",textAlign:"center"}}> <img src={daiyutong} style={{
-                                width:"100%"
-                            }} /></div>
+                            <div className="video" style={{width:"100%",textAlign:"center"}}> 
+                                <img src={daiyutong} style={{
+                                    width:"100%"
+                                }} alt=""/>
+                            </div>
                     <VideoCover {...this.props}></VideoCover>
                     <VideoSquare {...this.props}></VideoSquare>
                     <VideoMv {...this.props}></VideoMv>

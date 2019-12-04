@@ -108,12 +108,18 @@
     font-size: 14px;
     color:#ACACAC;
   }
+  .my-create-song .my-create-nav .create-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   .my-create-song .my-create-nav .create-icon span{
     font-size: 24px;
     font-weight: 600;
   }
   .my-create-song .my-create-nav .create-icon .icon-jia{
     margin-right: 20px;
+    font-weight: 100;
   }
   .my-create .my-create-song .create-song-list ul li{
     display: flex;

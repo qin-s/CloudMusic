@@ -21,5 +21,12 @@ export default function banner(state=stateBanner,{type,payload}){
         // console.log(payload,"red")
         state.daysongs = payload.daysongs
     }
+    if(type === action.getsongsheet){
+        state.changesongsheet = payload.changesongsheet
+    }
+    if(type === action.pushsheet){
+     
+        state.pushsheet = payload.pushsheet
+    }
     return state
 }

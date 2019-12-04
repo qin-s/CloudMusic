@@ -41,7 +41,6 @@ class MyCollectSinger extends React.Component{
                 }}>暂无收藏</div>
             }
             </>
-           
         )
     }
     componentDidMount(){

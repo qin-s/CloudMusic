@@ -8,6 +8,7 @@ import AccountBottom from "../../components/account/AccountBottom";
 class Account extends React.Component {
     render() {
         let userInfo = this.props.userInfo;
+        let userRegisterInfo = this.props.userRegisterInfo;
         return (
             <div className={"cm_account"}>
                 <div className={"cm_header"}>
@@ -21,12 +22,14 @@ class Account extends React.Component {
                         <input type="button" value={"立即登录"} onClick={this.login.bind(this)}/>
                     </div>
                     <div className={"cm_header_middle"} style={{display:localStorage.uid?"flex":"none"}}>
-                        <img src={userInfo.avatarUrl}/>
+                        <img src={userInfo.avatarUrl}  alt=""/>
                         <div className={"cm_header_middle_div"}>
                             <b>{userInfo.nickname}</b>
-                            <p className={"cm_header_middle_div_p"}>LV {userInfo.playlistCount}</p>
+                            <p className={"cm_header_middle_div_p"}>LV.{userInfo.gender}</p>
                         </div>
-                        <div className={"cm_header_middle_div_two"}><b className={"iconfont icon-changyongicon-"}></b> 签到</div>
+                        <div className={"cm_header_middle_div_two"} style={{display:userRegisterInfo.ok===1?"block":"none",backgroundColor:"#F8F8F8",border:"2px solid #E0E1E3",color:"#353537",fontSize:"20px"}}>&nbsp;已签到<b className={"iconfont icon-youjiantou"}></b></div>
+                        <div className={"cm_header_middle_div_two"} style={{display:userRegisterInfo.ok===-1?"block":"none"}} onClick={this.register.bind(this)}><b className={"iconfont icon-changyongicon-"}></b> 签到</div>
+                        
                     </div>
                     <div className={"cm_header_bottom"} style={{display:localStorage.uid?"flex":"none"}}>
                         <div>
@@ -66,6 +69,7 @@ class Account extends React.Component {
     componentDidMount() {
         if(localStorage.uid)
         this.props.getUserInfo.call(this)
+        this.props.getUserRegisterInfo.call(this)
     }
     login(){
         this.props.history.push("/login");
@@ -74,5 +78,15 @@ class Account extends React.Component {
         localStorage.clear();
         window.location.reload();
     }
+    register(){
+        this.props.changeUserRegisterInfo.call(this);
+        window.location.reload();
+    }
 }
-export default connect(state=>({userInfo:state.account.userInfo}),dispatch=>bindActionCreators(accountCreator,dispatch))(Account);
+function mapStateToProps(state) {
+    return {
+        userInfo:state.account.userInfo,
+        userRegisterInfo:state.account.userRegisterInfo,
+    }
+}
+export default connect(mapStateToProps,dispatch=>bindActionCreators(accountCreator,dispatch))(Account);

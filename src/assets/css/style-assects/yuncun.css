@@ -4,15 +4,15 @@
 }
 .t-header{
     width:100%;
-    background:red;
+    /* background:red; */
     display: flex;
     justify-content: space-around;
     font-size:40px;
-    color:#fff;
+    color:rgb(240, 23, 23);
     padding:20px 0
 }
 .t-header .t-one{
-    color:#fff;
+    color:rgb(221, 14, 14);
 }
 .t-header .t-two{
     color:#fff;
@@ -25,35 +25,42 @@
 }
 .t-search{
     width:100%;
-    background:red;
-    padding:20px 0;
+    /* background:red; */
+    padding:30px 0;
+    font-size:30px;
 }
 .t-sear{
     background:#ccc;
+
     width:90%;
     margin:0 auto;
     border:1px solid #ccc;
     display: flex;
     justify-content: space-evenly;
-    border-radius:16px;
+    border-radius:25px;
     padding:8px 0;
     
 }
+.icon-zoom{
+    font-size:40px;
+}
 .t-sear span{
-    font: size 30px;
+    font-size:40px;
 }
 .t-hotwall{
-    width:100%;
+    width:650px;
+    margin:0 auto;
     background:rgb(35, 35, 36);
     color:#fff;
     display:flex;
     justify-content: space-between;
     padding:30px 0;
     text-align: left;
-   
+   margin-bottom:30px;
+   border-radius: 20px; 
 }
 .t-hi{
-    font-size:32px;
+    font-size:22px;
     /* flex-wrap:wrap; */
     
 }
@@ -71,9 +78,32 @@
     
 }
 .t-one1{
-    width:750px;
+    width:650px;
+    border:1px solid #ccc;
+    margin:0 auto;
+    border-radius: 20px;
+    height:520px;
+    margin-bottom:40px;
+ 
+}
+.t-hot p{
+    line-height: 50px;
+    text-align: center;
+    font-size: 30px;
 }
 .t-hot img{
-    width:750px;
+    width:650px;
+    border-radius: 20px 20px 0 0;
+}
+.t-img{
+    display:flex;
+    justify-content: space-around;
+}
+.t-img p{
+    font-size:30px;
+    text-align:center
+}
+.icon-diancai1-copy{
+    font-size:30px;
 }
 

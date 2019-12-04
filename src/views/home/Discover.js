@@ -16,11 +16,11 @@ import {
             <>      
                 <div className={"nav"}>
                     <div className={"ull"}>
-                        <div><i className={"iconfont icon-wodediantai left"}></i></div>
+                        <div><i className={"iconfont icon-sanheng left"}></i></div>
                       <div className={"mid"}> <a className={"adisco"} href={"http://www.baidu.com"}> <i className={"iconfont icon-zoom midd"}>
                           <b className="nan">我太难了</b>  
                             </i></a> </div>
-                        <div> <i className={"iconfont icon-wodediantai right"}></i>  </div>
+                        <div> <i className={"iconfont icon-ziyuanldpi right"}></i>  </div>
                     </div>    
                 </div>  
 
@@ -29,12 +29,12 @@ import {
                         <div className="swiper-container">
                         <div className="swiper-wrapper ">
                        {
-                            this.props.bannerList.map(v=>(
+                            this.props.bannerList.length>0?this.props.bannerList.map(v=>(
                                     <div className={"swiper-slide banner "} key={v.bannerId}>
                                             <img src={'http://47.97.197.144:3005/img?url='+v.pic} alt=""/>
                                             <p style={{background:v.titleColor}} className={"rightdown"}>{v.typeTitle}</p>
                                     </div>      
-                                ))    
+                                )):"努力加载中······"
                         }
                         </div>
                         <div className="swiper-pagination"></div>
@@ -46,11 +46,11 @@ import {
                 <aside>
                     <div className={"day"}>
                         <ul>
-                            <li onClick={()=>{this.props.history.push("/daysongs")}}><i className={"iconfont icon-wodediantai "}></i> <p>每日推荐</p> </li>
-                            <li><i className={"iconfont icon-wodediantai "}></i> <p>歌单</p> </li>
-                            <li><i className={"iconfont icon-wodediantai "}></i> <p>排行榜</p> </li>
+                            <li onClick={()=>{this.props.history.push("/daysongs")}}><i className={"iconfont icon-rili "}></i> <p>每日推荐</p> </li>
+                            <li onClick={()=>{this.props.history.push("/songsheet")}}><i className={"iconfont icon-gedan "}></i> <p>歌单</p> </li>
+                            <li onClick={()=>{this.props.history.push("/ranking")}}><i className={"iconfont icon-paihangbang "}></i> <p>排行榜</p> </li>
                             <li><i className={"iconfont icon-wodediantai "}></i> <p>电台</p> </li>
-                            <li><i className={"iconfont icon-wodediantai "}></i> <p>直播</p> </li>
+                            <li><i className={"iconfont icon-15 "}></i> <p>直播</p> </li>
                         </ul>
                     </div>
                 </aside>
@@ -59,22 +59,22 @@ import {
                     <div>推荐歌单</div>
                     <div> <p className={"pleft"}> 为你精挑细选 </p> <p className={"pright"}> 歌单广场 </p>
                     </div>
-                    <div className={"songList"}>
+                    <div className={"songList"} >
                         <ul>
                             {
-                                this.props.rdsonglist.map(v=>(
+                                this.props.rdsonglist.length>0?this.props.rdsonglist.map(v=>(
                                     <Fragment key={v.id}>
-                                        <li>
+                                        <li onClick={()=>{this.props.history.push('/pushsheet/'+v.id)}}>
                                             <img src={'http://47.97.197.144:3005/img?url='+v.picUrl} alt=""/>
                                             <p>{v.name}</p>
                                             <div className={"playcount"}>
-                                            <i className={"iconfont icon-wodediantai "}></i>
+                                            <i className={"iconfont icon-triangle "}></i>
                                             <i>{String(v.playCount).substr(0,String(v.playCount).length-4)+"万"}</i>
                                             </div>
                                         </li>
                                     </Fragment> 
                                    
-                                ))
+                                )):"加载中······"
                             }
                             
                         </ul>
@@ -88,7 +88,7 @@ import {
                     <div className={"songList"}>
                         <ul>
                             {
-                                this.props.newdishList.map(v=>(
+                                 this.props.newdishList?this.props.newdishList.map(v=>(
                                     <Fragment key={v.id}>
                                         <li>
                                             <img src={'http://47.97.197.144:3005/img?url='+v.picUrl} alt=""/>
@@ -96,7 +96,7 @@ import {
                                         </li>
                                     </Fragment> 
                                    
-                                ))
+                                )):"努力加载中······"
                             }
                             
                         </ul>
@@ -107,7 +107,7 @@ import {
                     <div className={'essdiv'}></div>
                     <div className={"cloudcontent"}>
                             <p>云村精选</p>
-                            <div> <i className={"iconfont icon-wodediantai "}></i>获取新内容</div>
+                            <div> <i className={"iconfont icon-shuaxin "}></i>获取新内容</div>
                     </div>
                     <div className={"essborder"}></div>
                     {
@@ -129,9 +129,9 @@ import {
                                 <div className={"goodshare"}>
                                     <ul>
                                     <img style={{width:"20px",height:"20px",borderRadius:"10px",marginLeft:"100px",marginTop:"-1px"}} src={v.user.avatarUrl} alt=""/>
-                                        <li> <i className={"iconfont icon-wodediantai "}></i> {v.insiteForwardCount} </li>
-                                        <li><i className={"iconfont icon-wodediantai "}></i> {v.info.commentCount} </li>
-                                        <li><i className={"iconfont icon-wodediantai "}></i> {v.info.likedCount} </li>
+                                        <li> <i className={"iconfont icon-zhuanfa1 "}></i> {v.insiteForwardCount} </li>
+                                        <li><i className={"iconfont icon-pinglunpt1 "}></i> {v.info.commentCount} </li>
+                                        <li><i className={"iconfont icon-diancai1-copy "}></i> {v.info.likedCount} </li>
                                     </ul>
                                 </div>
                                <div className={"cloudsolid"}></div>
@@ -202,7 +202,7 @@ function mapDispatchToProps(dispatch){
                         limit:6
                     }
                 }).then(({data})=>{
-                    // console.log(data.result,"songs")
+                    console.log(data.result,"songs")
                     dispatch({
                         type:"GET_SONGS",
                         payload:{

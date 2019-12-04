@@ -1,7 +1,9 @@
 export default {
     vids:[],
     recommendVideo:[],
-    videoDetail: {},
+    videoUrl: {},
+    videoDetail:[],
+    videoDetail:[],
     videoNew:[],
     videoNetEase:[],
     videoListenbgm:[],
@@ -9,5 +11,9 @@ export default {
     videoAcgMusic:[],
     videoCover:[],
     videoDance:[],
-    videoGame:[]
+    videoGame:[],
+    moreExciteMv:[],
+    relevantVideo:[],
+    detailHotComment:[],
+    detailAllComent:[]
 }
