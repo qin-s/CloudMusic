@@ -65,13 +65,13 @@ class MySwiper extends React.Component{
         )
     }
     componentDidMount(){
-        this.$axios.get("playlist/create",{
-            params:{
-                name:"海阔天空"
-            }
-        }).then(({data})=>{
-            console.log("关键字搜索：",data)
-        })
+        // this.$axios.get("playlist/create",{+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        //     params:{
+        //         name:"海阔天空"
+        //     }
+        // }).then(({data})=>{
+        //     console.log("关键字搜索：",data)
+        // })
     }
 }
 export default MySwiper

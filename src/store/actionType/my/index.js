@@ -4,5 +4,7 @@ export default {
     collectSinger:"COLLECT_SINGER",
     collectMV:"COLLECT_MV",
     myRadioInfo:"MY_RADIO_INFO",
-    userRecordList:"USER_RECORD_LIST"
+    userRecordList:"USER_RECORD_LIST",
+    userCouldList:"USER_CLOUD_LIST"
+
 }

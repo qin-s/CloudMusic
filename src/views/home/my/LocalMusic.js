@@ -1,6 +1,8 @@
 import React from "react"
 import "../../../assets/css/my/record.css"
 import { Tabs, WhiteSpace } from 'antd-mobile';
+import myActionCreator from "../../../store/actionCreater/my"
+import {connect} from "react-redux"
 class LocalMusic extends React.Component{
     
     render(){
@@ -130,12 +132,27 @@ class LocalMusic extends React.Component{
         </div>
     )
 }
-    // renderContent = tab =>(   
-    // <div style={{ display: 'flex', backgroundColor: 'red' }}>
-    //         <div className="">
-    //         {tab.title}
-    //         </div>
-    //  </div>
-    // )
+componentDidMount(){
+    this.$axios.get("/song/url",{
+        params:{
+            id:463121500
+        }
+    }).then(({data})=>{
+        console.log("音乐url:",data)
+    })
+    this.props.getUserCouldList.call(this);
+    }
 }
-export default LocalMusic
+function mapStateToProps(state){
+    return {
+        userCouldList:state.my.userCouldList
+    }
+}
+function mapDispatchToProps(dispatch){
+    return {
+        getUserCouldList(){
+            dispatch(myActionCreator.getUserCouldList.call(this))
+        }
+    }
+}
+export default connect(mapStateToProps,mapDispatchToProps)(LocalMusic)

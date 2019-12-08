@@ -32,5 +32,10 @@ export default function (state=myStateInit,{type,payload}){
             state.userRecordList = payload.userRecordList
         }
     }
+    if(type === myActionType.userCouldList){
+        if(payload.userRecordList){
+            state.userCouldList = payload.userCouldList
+        }
+    }
     return state
 }

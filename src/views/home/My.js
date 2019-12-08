@@ -8,6 +8,8 @@ import MyLocalList from "../../components/my/MyLocalList"
 import MyCreateLove from "../../components/my/MyCreateLove"
 import {connect} from "react-redux"
 import myActionCreator from "../../store/actionCreater/my"
+import NewSongList from "../../components/my/modal/NewSongList"
+// import { Modal, Button } from 'antd';
 class My extends React.Component{
     constructor(){
         super();
@@ -40,7 +42,9 @@ class My extends React.Component{
                                 <i>({this.props.songList.length})</i>
                             </div>
                             <div className="create-icon">
-                                <span className="iconfont icon-jia"></span>
+                                {/* <span className="iconfont icon-jia"> */}
+                                    <NewSongList {...this.props}></NewSongList>
+                                {/* </span> */}
                                 <span className="iconfont icon-caidan-dian"></span>
                             </div>
                         </div>
