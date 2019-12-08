@@ -1,5 +1,5 @@
 import { Tabs, WhiteSpace } from 'antd-mobile';
-import React,{Fragment} from 'react'
+import React from 'react'
 import "../../../assets/css/discover/songsheet.scss"
 import { connect } from 'react-redux';
  class SongSheet extends React.Component {

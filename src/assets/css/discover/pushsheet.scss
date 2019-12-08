@@ -19,6 +19,7 @@
         i{
             font-size:50px;
             margin-right:30px;
+            
         }
     }
   
@@ -31,7 +32,7 @@
     padding:0 30px;
     position: relative;
     img{
-        width:260px;
+
         height:260px;
     }
     div{
@@ -99,12 +100,28 @@
     display:flex;
     align-items: center;
     margin-top:40px;
-
+    
     div:nth-child(2){
-        margin-left:50px;
+     
         text-align:left;
         flex:1;
         font-size:30px;
+
+
+      
+        overflow:hidden;
+        text-overflow:ellipsis;
+        
+        white-space:nowrap;
+        div{
+            
+            .simple{
+                overflow:hidden;
+                text-overflow:ellipsis;
+                
+                white-space:nowrap;
+            }
+        }
     }
     div:nth-child(3){
        

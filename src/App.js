@@ -23,6 +23,7 @@ import SongSheet from './views/home/discover/SongSheet';
 import RanKing from './views/home/discover/RanKing';
 import PushSheet from './views/home/discover/PushSheet';
 import MyNews from './views/home/account/MyNews';
+import SingSong from './components/discover/SingSong';
 
 function App() {
   return (
@@ -45,6 +46,7 @@ function App() {
             <Route path={"/ranking"} component={RanKing}></Route>
             <Route path={"/pushsheet/:id"} component={PushSheet}></Route>
             <Route path={"/mynews"} component={MyNews}></Route>
+            <Route path={"/singsong"} component={SingSong}></Route> 
             <Route path={"/"} component={Index}></Route>
 
         </Switch>

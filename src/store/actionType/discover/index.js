@@ -5,5 +5,6 @@ export default {
     esscloud:"GET_ESS_CLOUD",
     daysongs:"DAY_SONGS",
     getsongsheet:"SONG_SHEET",
-    pushsheet:"PUSH_SHEET"
+    pushsheet:"PUSH_SHEET",
+    singsongs:"SING_SONGS"
 }

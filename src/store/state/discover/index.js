@@ -11,5 +11,6 @@ export default {
         '华语' 
     ],
     changesongsheet:[],
-    pushsheet:[]
+    pushsheet:[],
+    singsongs:[]
 }

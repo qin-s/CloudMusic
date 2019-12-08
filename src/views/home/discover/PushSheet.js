@@ -60,10 +60,10 @@ import '../../../assets/css/discover/pushsheet.scss'
                     {
                         v.tracks.map((b,i)=>(
                             <div key={i} className={"lastsheet"}>
-                                <div style={{fontSize:"20px",width:"20px"}}>{i+1}</div>
+                                <div style={{fontSize:"20px",width:"40px"}}>{i+1}</div>
                                 <div>
                                     <div>
-                                        {b.name}
+                                        <div className={"simple"}>{b.name}</div>
                                         <div>
                                         {
                                           

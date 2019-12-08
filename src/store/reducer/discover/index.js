@@ -28,5 +28,8 @@ export default function banner(state=stateBanner,{type,payload}){
      
         state.pushsheet = payload.pushsheet
     }
+    if(type === action.singsongs){
+        state.singsongs = payload.singsongs
+    }
     return state
 }

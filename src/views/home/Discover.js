@@ -16,9 +16,9 @@ import {
             <>      
                 <div className={"nav"}>
                     <div className={"ull"}>
-                        <div><i className={"iconfont icon-sanheng left"}></i></div>
+                        <div><i className={"iconfont icon-bofang left"}></i></div>
                       <div className={"mid"}> <a className={"adisco"} href={"http://www.baidu.com"}> <i className={"iconfont icon-zoom midd"}>
-                          <b className="nan">我太难了</b>  
+                          <b className="nan">搜索</b>  
                             </i></a> </div>
                         <div> <i className={"iconfont icon-ziyuanldpi right"}></i>  </div>
                     </div>    
@@ -31,7 +31,7 @@ import {
                        {
                             this.props.bannerList.length>0?this.props.bannerList.map(v=>(
                                     <div className={"swiper-slide banner "} key={v.bannerId}>
-                                            <img src={'http://47.97.197.144:3005/img?url='+v.pic} alt=""/>
+                                            <a href={v.url}><img  src={'http://47.97.197.144:3005/img?url='+v.pic} alt=""/></a>
                                             <p style={{background:v.titleColor}} className={"rightdown"}>{v.typeTitle}</p>
                                     </div>      
                                 )):"努力加载中······"
@@ -111,13 +111,13 @@ import {
                     </div>
                     <div className={"essborder"}></div>
                     {
-                        this.props.esscloudList.map(v=>(
-                           <div className={"cloudpic"} key={v.id}>
+                        this.props.esscloudList.map((v,i)=>(
+                           <div className={"cloudpic"} key={i}>
                         <div className={"cloudmsg"}> {JSON.parse(v.json).msg} </div> 
 
                         
 
-                        {JSON.parse(v.json).event?JSON.parse(v.json).event.pics.map(a=>(  <Fragment key={Date.now()}><img style={{height:"300px"}} src={a.originUrl} alt="" /></Fragment> )):null}
+                        {JSON.parse(v.json).event?JSON.parse(v.json).event.pics.map((a,i)=>(  <Fragment key={i}><img style={{height:"300px"}} src={a.originUrl} alt="" /></Fragment> )):null}
                               { JSON.parse(v.json).video?<img src={JSON.parse(v.json).video.coverUrl } alt=""></img> :null   } 
 
                                {v.pics.map((v)=>(
@@ -181,7 +181,7 @@ function mapDispatchToProps(dispatch){
                         type:1
                     }
                 }).then(({data})=>{
-                    // console.log(data,"banner")
+                    console.log(data,"banner")
                     dispatch({
                         type:"GET_BANNER",
                         payload:{
